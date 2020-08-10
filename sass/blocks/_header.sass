@@ -1,4 +1,12 @@
 .header
+  padding-top: 50px
+  &-top
+    background-color: $white
+    position: fixed
+    left: 0
+    right: 0
+    top: 0
+    z-index: 99
   &__top
     &-row
       border-bottom: 1px solid #D9DADB
@@ -9,9 +17,12 @@
       display: flex
     &-right
       display: flex
-  &__sections
+  &__burger
+    padding: 0
     display: flex
     align-items: center
+    background-color: $white
+    border: none
     border-right: 1px solid #D9DADB
   &__search
     margin-left: 25px
@@ -25,6 +36,7 @@
     align-items: center
   &__main
     &-row
+      min-height: 84px
       display: flex
       align-items: center
   &__image
@@ -38,18 +50,54 @@
   &__weather
     margin-left: 60px
     margin-right: 10px
-.sections
+  &__menu
+    margin: 0
+  &-menu
+    list-style-type: none
+    padding: 17px 0
+    display: flex
+    align-items: center
+    justify-content: space-between
+    color: $white
+    &__link
+      text-decoration: none
+      color: inherit
+      text-transform: uppercase
+      font-weight: 900
+  &__outer
+    padding-top: 30px
+.burger
   &__icon
     width: 20px
     height: 20px
+    padding: 3px 1px
     line-height: 20px
     margin-right: 15px
+    display: flex
+    flex-direction: column
+    justify-content: space-between
   &__title
     font-size: 14px
     line-height: 20px
     font-weight: 900
     color: $dark
     margin-right: 25px
+  span
+    transition: all 0.3s
+  &__line
+    width: 18px
+    height: 1px
+    background-color: $icon-color
+    &:nth-child(2)
+      width: 14px
+  &--active
+    span
+      &:nth-child(1)
+        transform: rotate(45deg) translate(4px, 7px)
+      &:nth-child(2)
+        opacity: 0
+      &:nth-child(3)
+        transform: rotate(-45deg) translate(2px, -5px)
 .search
   &__icon
     margin-right: 10px
@@ -88,3 +136,38 @@
   &__login
     margin-left: 10px
     font-weight: normal
+.menu
+  &-wrapper
+    background-color: $dark
+.outer
+  background-color: $dark
+  height: 500px
+  &__wrapper
+    max-width: 1140px
+    margin: 0 auto
+    background: #30363D
+    border-radius: 10px
+    display: flex
+    align-items: center
+    justify-content: space-between
+    padding: 25px 25px 30px 25px
+  &__card
+    max-width: 260px
+    display: flex
+    align-items: center
+    justify-content: space-between
+    &:not(:last-child)
+      padding-right: 25px
+      border-right: 1px solid $text-regular
+  &__title
+    font-family: Roboto Slab
+    font-weight: bold
+    font-size: 16px
+    line-height: 25px
+    color: $white
+    max-width: 155px
+    margin: 0
+  &__img
+    width: 65px
+    height: 65px
+    margin-left: 15px

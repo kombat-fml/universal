@@ -1,11 +1,120 @@
-// @media (max-width: 1200px)
-  
-// @media (max-width: 992px)
-  
-// @media (max-width: 767px)
-  
-// @media (max-width: 576px)
-      
+@media (max-width: 1200px)
+  .container
+    max-width: 960px
+  .outer
+    &__wrapper
+      max-width: 800px
+      flex-wrap: wrap
+    &__card
+      &:not(:last-child)
+        padding-right: 0
+        border-right: none
+      &:nth-child(1),&:nth-child(2)
+        margin-bottom: 30px
+      &:nth-child(2n+1)
+        max-width: 376px
+        padding-right: 25px
+        border-right: 1px solid $text-regular
+      &:nth-child(2n)
+        max-width: 350px
+    &__title
+      max-width: 300px
+@media (max-width: 992px)
+  .container
+    max-width: 700px 
+  .header
+    &-menu
+      &__link
+        font-size: 13px
+    &__text
+      &--left
+        max-width: 140px
+      &--right
+        max-width: 100px
+    &__user
+      margin-left: 20px
+    &__image
+      margin-left: 0
+    &__weather
+      margin-left: 20px
+  .search
+    &__input
+      width: 180px
+  .outer
+    &__wrapper
+      max-width: 700px
+    &__card
+      &:nth-child(2n+1)
+        max-width: 326px
+      &:nth-child(2n)
+        max-width: 300px
+    &__title
+      font-size: 14px
+      line-height: 20px
+@media (max-width: 767px)
+  .no-scroll
+    overflow: hidden
+    padding-right: 0
+  .container
+    max-width: 576px
+    width: 92%
+  .menu
+    &-wrapper
+      display: none
+      position: fixed
+      left: 0
+      right: 0
+      height: 500px
+      top: 50px
+      &--visible
+        padding: 20px 0 20px 0
+        display: block
+        overflow: auto
+  .header
+    &__text
+      &--left
+        display: none
+    &__date
+      display: none
+    &__image
+      margin-right: 0
+    &-menu
+      flex-direction: column
+      &__item
+        margin-bottom: 30px
+  .burger
+    &__title
+      display: none
+  .outer
+    &__wrapper
+      max-width: 350px
+      width: 92%
+    &__card
+      &:nth-child(1n)
+        max-width: 100%
+        border-right: none
+        padding-right: 0
+      &:nth-child(3)
+        margin-bottom: 30px
+@media (max-width: 576px)
+  .container
+    min-width: 280px
+    width: 92%
+  .header
+    &__subscribe, &__image, &__weather
+      display: none
+    &__text
+      &--right
+        display: none
+    &__user
+      margin-left: 0
+    &__search
+      margin-left: 15px
+  .search
+    &__input
+      max-width: 100px
+
+
 // @media (max-height: 530px)
 
 // @media (min-width: 993px)

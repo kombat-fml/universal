@@ -14,51 +14,56 @@
   </head>
   <body>
     <header class="header">
-      <section class="container">
-        <div class="header__top-row">
-          <div class="header__top-left">
-            <div class="header__sections sections">
-              <div class="sections__icon">
-                <svg width="18" height="14">
-                  <use xlink:href="img/icons.svg#burger"></use>
+      <div class="header-top">
+        <div class="container">
+          <div class="header__top-row">
+            <div class="header__top-left">
+              <button class="header__burger burger">
+                <div class="burger__icon">
+                  <span class="burger__line"></span>
+                  <span class="burger__line"></span>
+                  <span class="burger__line"></span>
+                </div>
+                <!-- /.section__icon -->
+                <span class="burger__title">Sections</span>
+              </button>
+              <form action="#" class="header__search search">
+                <svg width="18" height="18" class="search__icon">
+                  <use xlink:href="img/icons.svg#search-icon"></use>
                 </svg>
-              </div>
-              <!-- /.section__icon -->
-              <span class="sections__title">Sections</span>
+                <input type="text" class="search__input" placeholder="Search" />
+              </form>
             </div>
-            <!-- /.header__sections -->
-            <form action="#" class="header__search search">
-              <svg width="18" height="18" class="search__icon">
-                <use xlink:href="img/icons.svg#search-icon"></use>
-              </svg>
-              <input type="text" class="search__input" placeholder="Search" />
-            </form>
-          </div>
-          <!-- /.header__top-left -->
-          <div class="header__top-right">
-            <div class="header__subscribe subscribe">
-              <img
-                src="img/sub-now.jpg"
-                alt="subscribe image"
-                class="subscribe__img"
-              />
-              <div class="subscribe__text">
-                <h4 class="subscribe__title">Subscribe Now</h4>
-                <span class="subscribe__subtitle">3 month for $19</span>
+            <!-- /.header__top-left -->
+            <div class="header__top-right">
+              <div class="header__subscribe subscribe">
+                <img
+                  src="img/sub-now.jpg"
+                  alt="subscribe image"
+                  class="subscribe__img"
+                />
+                <div class="subscribe__text">
+                  <h4 class="subscribe__title">Subscribe Now</h4>
+                  <span class="subscribe__subtitle">3 month for $19</span>
+                </div>
+                <!-- /.subscribe__text -->
               </div>
-              <!-- /.subscribe__text -->
+              <!-- /.header__subscribe -->
+              <a href="#" class="header__user user">
+                <svg width="16" height="18">
+                  <use xlink:href="img/icons.svg#user-icon"></use>
+                </svg>
+                <span class="user__login">Sign In</span>
+              </a>
             </div>
-            <!-- /.header__subscribe -->
-            <a href="#" class="header__user user">
-              <svg width="16" height="18">
-                <use xlink:href="img/icons.svg#user-icon"></use>
-              </svg>
-              <span class="user__login">Sign In</span>
-            </a>
+            <!-- /.header__top-right -->
           </div>
-          <!-- /.header__top-right -->
+          <!-- /.header__top-row -->
         </div>
-        <!-- /.header__top-row -->
+        <!-- /.container -->
+      </div>
+      <!-- /.header-top -->
+      <section class="container">
         <div class="header__main-row">
           <img
             src="img/sol.png"
@@ -71,7 +76,7 @@
           <a href="#" class="header__logo logo">
             <img src="img/logo.svg" alt="Logo: universal" class="logo__img" />
           </a>
-          <span class="header__text header__text--right"
+          <span class="header__text header__date header__text--right"
             >Monday, January 1, 2018</span
           >
           <svg width="18" height="18" class="header__weather">
@@ -81,6 +86,94 @@
         </div>
         <!-- /.header__main-row -->
       </section>
+      <div class="menu-wrapper">
+        <div class="container">
+          <ul class="header__menu header-menu">
+            <li class="header-menu__item">
+              <a href="#" class="header-menu__link">News</a>
+            </li>
+            <li class="header-menu__item">
+              <a href="#" class="header-menu__link">Opinion</a>
+            </li>
+            <li class="header-menu__item">
+              <a href="#" class="header-menu__link">Science</a>
+            </li>
+            <li class="header-menu__item">
+              <a href="#" class="header-menu__link">Life</a>
+            </li>
+            <li class="header-menu__item">
+              <a href="#" class="header-menu__link">Travel</a>
+            </li>
+            <li class="header-menu__item">
+              <a href="#" class="header-menu__link">Moneys</a>
+            </li>
+            <li class="header-menu__item">
+              <a href="#" class="header-menu__link">Art & Design</a>
+            </li>
+            <li class="header-menu__item">
+              <a href="#" class="header-menu__link">Sports</a>
+            </li>
+            <li class="header-menu__item">
+              <a href="#" class="header-menu__link">People</a>
+            </li>
+            <li class="header-menu__item">
+              <a href="#" class="header-menu__link">Health</a>
+            </li>
+            <li class="header-menu__item">
+              <a href="#" class="header-menu__link">Education</a>
+            </li>
+          </ul>
+        </div>
+        <!-- /.container -->
+      </div>
+      <!-- /.menu-wrapper -->
+      <div class="header__outer outer">
+        <div class="outer__wrapper">
+          <div class="outer__card">
+            <h3 class="outer__title">
+              25 Songs That Tell Us Where Music Is Going
+            </h3>
+            <img
+              src="img/outer/outer-1.jpg"
+              alt="25 Songs That Tell Us Where Music Is Going"
+              class="outer__img"
+            />
+          </div>
+          <div class="outer__card">
+            <h3 class="outer__title">
+              These Ancient Assassins Eat Their Own Kind
+            </h3>
+            <img
+              src="img/outer/outer-2.jpg"
+              alt="These Ancient Assassins Eat Their Own Kind"
+              class="outer__img"
+            />
+          </div>
+          <div class="outer__card">
+            <h3 class="outer__title">
+              How Do You Teach People to Love Difficult Music?
+            </h3>
+            <img
+              src="img/outer/outer-3.jpg"
+              alt="How Do You Teach People to Love Difficult Music?"
+              class="outer__img"
+            />
+          </div>
+          <div class="outer__card">
+            <h3 class="outer__title">
+              International Soccer’s Man of Mystery
+            </h3>
+            <img
+              src="img/outer/outer-4.jpg"
+              alt="International Soccer’s Man of Mystery"
+              class="outer__img"
+            />
+          </div>
+        </div>
+        <!-- /.outer__wrapper -->
+      </div>
+      <!-- /.outer -->
     </header>
+    <script src="js/main.js"></script>
   </body>
 </html>
