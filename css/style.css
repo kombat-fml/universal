@@ -1077,6 +1077,13 @@ button {
   max-width: 249px;
 }
 
+.table-card__info--medium {
+  position: absolute;
+  top: 290px;
+  left: 25px;
+  right: 25px;
+}
+
 .table-card__title {
   margin: 0 0 5px 0;
   font-family: Roboto Slab;
@@ -1247,8 +1254,16 @@ button {
   background: linear-gradient(0deg, rgba(64, 48, 61, 0.35), rgba(64, 48, 61, 0.35));
 }
 
+.table-card__image {
+  position: absolute;
+  left: 0;
+  top: 0;
+  right: 0;
+}
+
 .table__card {
   padding: 25px 25px 30px 25px;
+  overflow: hidden;
 }
 
 .table__card--big {
@@ -1265,7 +1280,6 @@ button {
 }
 
 .table__card--popular {
-  overflow: hidden;
   position: relative;
   -ms-grid-row: 1;
   -ms-grid-row-span: 2;
@@ -1276,6 +1290,7 @@ button {
 }
 
 .table__card--medium {
+  position: relative;
   -ms-grid-row: 3;
   -ms-grid-row-span: 2;
   grid-row: 3 / 5;
@@ -1293,6 +1308,112 @@ button {
   grid-column: 4 / 5;
   background-color: #6E99AE;
   border-radius: 10px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+.table-columns__title {
+  font-weight: 900;
+  color: #ffffff;
+  letter-spacing: 0.5px;
+  text-transform: uppercase;
+  padding: 20px 25px;
+  display: block;
+}
+
+.table-columns__line {
+  width: 100%;
+  height: 1px;
+  background-color: #B4D1E0;
+  opacity: 0.5;
+}
+
+.table-columns__card {
+  text-decoration: none;
+  margin: 20px 25px 25px 25px;
+}
+
+.table-columns__card--first {
+  margin-top: 45px;
+}
+
+.table-columns__card--last {
+  margin-bottom: 5px;
+}
+
+.table-columns__user {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  margin-left: 10px;
+  margin-bottom: 39px;
+}
+
+.table-columns__info {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+.table-columns__cite {
+  font-family: Roboto Slab;
+  font-weight: bold;
+  font-size: 20px;
+  line-height: 25px;
+  color: #ffffff;
+  margin: 0 -1px 15px 10px;
+  position: relative;
+  z-index: 4;
+}
+
+.table-columns__cite::before {
+  content: '';
+  position: absolute;
+  top: -10px;
+  left: -10px;
+  z-index: -1;
+  width: 40px;
+  height: 40px;
+  background-image: url(../img/table/quote.svg);
+  background-repeat: no-repeat;
+}
+
+.table-columns__avatar {
+  border-radius: 50%;
+  width: 45px;
+  height: 45px;
+  margin-right: 10px;
+}
+
+.table-columns__author {
+  color: #D1E2EB;
+}
+
+.table-columns__vocation {
+  color: #D1E2EB;
+  font-size: 12px;
+  line-height: 15px;
+}
+
+.table-columns__link {
+  text-decoration: none;
+  font-weight: 900;
+  color: #ffffff;
+  text-align: center;
+  padding-top: 10px;
+  padding-bottom: 14px;
 }
 
 @media (max-width: 1200px) {

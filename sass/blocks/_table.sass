@@ -17,6 +17,11 @@
       display: flex
       flex-direction: column
       max-width: 249px
+      &--medium
+        position: absolute
+        top: 290px
+        left: 25px
+        right: 25px
     &__title
       margin: 0 0 5px 0
       font-family: Roboto Slab
@@ -129,8 +134,14 @@
       right: 0
       z-index: 2
       background: linear-gradient(0deg, rgba(64, 48, 61, 0.35), rgba(64, 48, 61, 0.35))
+    &__image
+      position: absolute
+      left: 0
+      top: 0
+      right: 0
   &__card
     padding: 25px 25px 30px 25px
+    overflow: hidden
     &--big
       background-image: url("../img/table/car.png")
       background-repeat: no-repeat
@@ -139,11 +150,11 @@
       grid-column: 1 / 3
       position: relative
     &--popular
-      overflow: hidden
       position: relative
       grid-row: 1 / 3
       grid-column: 3 / 4
     &--medium
+      position: relative
       grid-row: 3 / 5
       grid-column: 1 / 2
   &-columns
@@ -151,3 +162,71 @@
     grid-column: 4 / 5
     background-color: #6E99AE
     border-radius: 10px
+    display: flex
+    flex-direction: column
+    &__title
+      font-weight: 900
+      color: $white
+      letter-spacing: 0.5px
+      text-transform: uppercase
+      padding: 20px 25px
+      display: block
+    &__line
+      width: 100%
+      height: 1px
+      background-color: #B4D1E0
+      opacity: 0.5
+    &__card
+      text-decoration: none
+      margin: 20px 25px 25px 25px
+      &--first
+        margin-top: 45px
+      &--last
+        margin-bottom: 5px
+    &__user
+      display: flex
+      align-items: center
+      margin-left: 10px
+      margin-bottom: 39px
+    &__info
+      display: flex
+      flex-direction: column
+    &__cite
+      font-family: Roboto Slab
+      font-weight: bold
+      font-size: 20px
+      line-height: 25px
+      color: $white
+      margin: 0 -1px 15px 10px
+      position: relative
+      z-index: 4
+      &::before
+        content: ''
+        position: absolute
+        top: -10px
+        left: -10px
+        z-index: -1
+        width: 40px
+        height: 40px
+        background-image: url(../img/table/quote.svg)
+        background-repeat: no-repeat
+    &__avatar
+      border-radius: 50%
+      width: 45px
+      height: 45px
+      margin-right: 10px
+    &__author
+      color: #D1E2EB
+    &__vocation
+      color: #D1E2EB
+      font-size: 12px
+      line-height: 15px
+    &__link
+      text-decoration: none
+      font-weight: 900
+      color: $white
+      text-align: center
+      padding-top: 10px
+      padding-bottom: 14px
+
+
