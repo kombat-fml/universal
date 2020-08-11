@@ -49,15 +49,23 @@ document.addEventListener('DOMContentLoaded', () => {
   [...tabs].forEach((tab) => tab.addEventListener('click', tabClick));
 
   function tabClick(event) {
-    event.preventDefault();
-    const tabId = event.target.closest('.tabs__card').dataset.id;
+    if (clientWidth > 767) {
+      if (!event.target.closest('.tabs__icon')) {
+        event.preventDefault();
+        const tabId = event.target.closest('.tabs__card').dataset.id;
 
-    [...tabs].forEach((tab, i) => {
-      tab.classList.remove('tabs__card--active');
-      content[i].classList.remove('window__wrapper--active');
-    });
+        [...tabs].forEach((tab, i) => {
+          tab.classList.remove('tabs__card--active');
+          content[i].classList.remove('window__wrapper--active');
+        });
 
-    tabs[tabId - 1].classList.add('tabs__card--active');
-    content[tabId - 1].classList.add('window__wrapper--active');
+        tabs[tabId - 1].classList.add('tabs__card--active');
+        content[tabId - 1].classList.add('window__wrapper--active');
+      }
+    } else {
+      if (!event.target.closest('.tabs__icon')) {
+        window.location.href = 'firstpost.html';
+      }
+    }
   }
 });

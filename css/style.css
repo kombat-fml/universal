@@ -955,6 +955,7 @@ button {
   z-index: 5;
   text-decoration: none;
   color: #4B5157;
+  cursor: pointer;
 }
 
 .tabs__card--active {
@@ -1001,6 +1002,14 @@ button {
 
 .tabs__card-tag--green {
   color: #3DC47E;
+}
+
+.tabs__play {
+  height: 20px;
+  width: 20px;
+  border: none;
+  padding: 0;
+  background-color: transparent;
 }
 
 .tabs__icon {
@@ -1293,10 +1302,13 @@ button {
     margin-bottom: 30px;
   }
   .hero__window {
-    width: 100%;
+    display: none;
   }
   .hero__tabs {
-    display: none;
+    width: 100%;
+  }
+  .tabs__card--active {
+    background-color: #ffffff;
   }
 }
 
