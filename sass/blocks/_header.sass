@@ -112,11 +112,12 @@
     &::placeholder
       color: $light
 .subscribe
+  text-decoration: none
   display: flex
   &__img
     width: 66px
     height: 44px
-    align-self: end
+    align-self: flex-end
     margin-right: 10px
   &__text
     align-self: center
@@ -126,6 +127,7 @@
     font-size: 12px
     line-height: 15px
     font-weight: 900
+    color: $dark
   &__subtitle
     font-weight: normal
     font-size: 12px
@@ -148,10 +150,24 @@
       z-index: 50
       left: 0
       right: 0
-      height: 114px
+      height: 500px
       top: 50px
       padding-top: 65px
       display: block
+      .header
+        &__menu
+          flex-direction: column
+
+      // display: none
+      // position: fixed
+      // left: 0
+      // right: 0
+      // height: 500px
+      // top: 50px
+      // &--visible
+      //   padding: 70px 0 20px 0
+      //   display: block
+      //   overflow: auto
 .outer
   background-color: $dark
   height: 475px
@@ -165,6 +181,7 @@
     justify-content: space-between
     padding: 25px 25px 30px 25px
   &__card
+    text-decoration: none
     max-width: 260px
     display: flex
     align-items: center
