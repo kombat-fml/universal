@@ -34,4 +34,23 @@ document.addEventListener('DOMContentLoaded', () => {
       count = -130;
     }
   };
+
+  //табы
+  const tabs = document.getElementsByClassName('tabs__card');
+  const content = document.getElementsByClassName('window__wrapper');
+
+  [...tabs].forEach((tab) => tab.addEventListener('click', tabClick));
+
+  function tabClick(event) {
+    event.preventDefault();
+    const tabId = event.target.closest('.tabs__card').dataset.id;
+
+    [...tabs].forEach((tab, i) => {
+      tab.classList.remove('tabs__card--active');
+      content[i].classList.remove('window__wrapper--active');
+    });
+
+    tabs[tabId - 1].classList.add('tabs__card--active');
+    content[tabId - 1].classList.add('window__wrapper--active');
+  }
 });

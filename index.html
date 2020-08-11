@@ -9,6 +9,7 @@
       href="https://fonts.googleapis.com/css2?family=Lato:wght@400;900&family=Roboto+Slab:wght@700&display=swap"
       rel="stylesheet"
     />
+    <link rel="stylesheet" href="css/jquery.fancybox.min.css" />
     <link rel="stylesheet" href="css/style.css" />
     <title>Universal - online magazine</title>
   </head>
@@ -177,64 +178,246 @@
     </header>
     <section class="hero">
       <div class="container">
-        <div class="hero-wrapper">
+        <div class="hero__wrapper hero-wrapper">
           <div class="hero__window window">
-            <div class="window__gradient"></div>
-            <!-- /.window__gradient -->
-            <img
-              src="img/hero/image-1.png"
-              alt="image: In Southeast England, White Cliffs and Fish"
-              class="window__img"
-            />
-            <div class="window__content">
-              <div class="window__user">
-                <img
-                  src="img/hero/avatar-1.png"
-                  alt="avatar: Benjamin Turner"
-                  class="window__avatar"
-                />
-                <div class="window__user-info">
-                  <span class="window__author">By Benjamin Turner</span>
-                  <span class="window__status">Traveler</span>
+            <div class="window__wrapper window__wrapper--active">
+              <div class="window__gradient"></div>
+              <!-- /.window__gradient -->
+              <img
+                src="img/hero/image-1.jpg"
+                alt="image: In Southeast England, White Cliffs and Fish"
+                class="window__img"
+              />
+              <div class="window__content">
+                <div class="window__user">
+                  <img
+                    src="img/hero/avatar-1.png"
+                    alt="avatar: Benjamin Turner"
+                    class="window__avatar"
+                  />
+                  <div class="window__user-info">
+                    <span class="window__author">By Benjamin Turner</span>
+                    <span class="window__status">Traveler</span>
+                  </div>
+                  <!-- /.window__user-info -->
                 </div>
-                <!-- /.window__user-info -->
-              </div>
-              <!-- /.window__user -->
-              <span class="window__tag">Destinations</span>
-              <h2 class="window__title">
-                In Southeast England, White Cliffs and Fish
-              </h2>
-              <div class="window__buttons">
-                <button class="window__button">
-                  <span class="window__button-text">Read more</span>
-                  <svg width="15" height="7" class="window__arrow">
-                    <use xlink:href="img/icons.svg#read-more"></use>
-                  </svg>
-                </button>
-                <button class="window__play">
-                  <svg width="12" height="14" class="window__play-arrow">
-                    <use xlink:href="img/icons.svg#play-arrow"></use>
-                  </svg>
-                  <svg width="50" height="50" class="window__play-border">
-                    <use xlink:href="img/icons.svg#play-border"></use>
-                  </svg>
-                </button>
-                <div class="window__info">
-                  <span class="window__media-title"
-                    >The chalk cliff of Beachy Head</span
+                <!-- /.window__user -->
+                <span class="window__tag">Destinations</span>
+                <h2 class="window__title">
+                  In Southeast England, White Cliffs and Fish
+                </h2>
+                <div class="window__buttons">
+                  <a href="firstpost.html" class="window__button">
+                    <span class="window__button-text">Read more</span>
+                    <svg width="15" height="7" class="window__arrow">
+                      <use xlink:href="img/icons.svg#read-more"></use>
+                    </svg>
+                  </a>
+                  <button
+                    data-fancybox
+                    href="https://www.youtube.com/watch?v=G4ioMX0qpXk"
+                    class="window__play"
                   >
-                  <span class="window__timer">18:05</span>
+                    <svg width="12" height="14" class="window__play-arrow">
+                      <use xlink:href="img/icons.svg#play-arrow"></use>
+                    </svg>
+                    <svg width="50" height="50" class="window__play-border">
+                      <use xlink:href="img/icons.svg#play-border"></use>
+                    </svg>
+                  </button>
+                  <div class="window__info">
+                    <span class="window__media-title"
+                      >The chalk cliff of Beachy Head</span
+                    >
+                    <span class="window__timer">18:05</span>
+                  </div>
+                  <!-- /.window__info -->
                 </div>
-                <!-- /.window__info -->
+                <!-- /.window__buttons -->
               </div>
-              <!-- /.window__buttons -->
+              <!-- /.window__content -->
             </div>
-            <!-- /.window__content -->
+            <!-- /.window__wrapper window__wrapper--active -->
+            <div class="window__wrapper">
+              <div class="window__gradient"></div>
+              <!-- /.window__gradient -->
+              <img
+                src="img/hero/image-2.jpg"
+                alt="image: In Southeast England, White Cliffs and Fish"
+                class="window__img"
+              />
+              <div class="window__content">
+                <div class="window__user">
+                  <img
+                    src="img/hero/avatar-1.png"
+                    alt="avatar: Benjamin Turner"
+                    class="window__avatar"
+                  />
+                  <div class="window__user-info">
+                    <span class="window__author">By Benjamin Turner</span>
+                    <span class="window__status">Traveler</span>
+                  </div>
+                  <!-- /.window__user-info -->
+                </div>
+                <!-- /.window__user -->
+                <span class="window__tag">Destinations</span>
+                <h2 class="window__title">
+                  In Southeast England, White Cliffs and Fish
+                </h2>
+                <div class="window__buttons">
+                  <a href="firstpost.html" class="window__button">
+                    <span class="window__button-text">Read more</span>
+                    <svg width="15" height="7" class="window__arrow">
+                      <use xlink:href="img/icons.svg#read-more"></use>
+                    </svg>
+                  </a>
+                </div>
+                <!-- /.window__buttons -->
+              </div>
+              <!-- /.window__content -->
+            </div>
+            <!-- /.window__wrapper -->
+            <div class="window__wrapper">
+              <div class="window__gradient"></div>
+              <!-- /.window__gradient -->
+              <img
+                src="img/hero/image-3.jpg"
+                alt="image: In Southeast England, White Cliffs and Fish"
+                class="window__img"
+              />
+              <div class="window__content">
+                <div class="window__user">
+                  <img
+                    src="img/hero/avatar-1.png"
+                    alt="avatar: Benjamin Turner"
+                    class="window__avatar"
+                  />
+                  <div class="window__user-info">
+                    <span class="window__author">By Benjamin Turner</span>
+                    <span class="window__status">Traveler</span>
+                  </div>
+                  <!-- /.window__user-info -->
+                </div>
+                <!-- /.window__user -->
+                <span class="window__tag">Destinations</span>
+                <h2 class="window__title">
+                  In Southeast England, White Cliffs and Fish
+                </h2>
+                <div class="window__buttons">
+                  <a href="firstpost.html" class="window__button">
+                    <span class="window__button-text">Read more</span>
+                    <svg width="15" height="7" class="window__arrow">
+                      <use xlink:href="img/icons.svg#read-more"></use>
+                    </svg>
+                  </a>
+                </div>
+                <!-- /.window__buttons -->
+              </div>
+              <!-- /.window__content -->
+            </div>
+            <!-- /.window__wrapper -->
+            <div class="window__wrapper">
+              <div class="window__gradient"></div>
+              <!-- /.window__gradient -->
+              <img
+                src="img/hero/image-4.jpg"
+                alt="image: In Southeast England, White Cliffs and Fish"
+                class="window__img"
+              />
+              <div class="window__content">
+                <div class="window__user">
+                  <img
+                    src="img/hero/avatar-1.png"
+                    alt="avatar: Benjamin Turner"
+                    class="window__avatar"
+                  />
+                  <div class="window__user-info">
+                    <span class="window__author">By Benjamin Turner</span>
+                    <span class="window__status">Traveler</span>
+                  </div>
+                  <!-- /.window__user-info -->
+                </div>
+                <!-- /.window__user -->
+                <span class="window__tag">Destinations</span>
+                <h2 class="window__title">
+                  In Southeast England, White Cliffs and Fish
+                </h2>
+                <div class="window__buttons">
+                  <a href="firstpost.html" class="window__button">
+                    <span class="window__button-text">Read more</span>
+                    <svg width="15" height="7" class="window__arrow">
+                      <use xlink:href="img/icons.svg#read-more"></use>
+                    </svg>
+                  </a>
+                  <button
+                    data-fancybox
+                    href="https://www.youtube.com/watch?v=O_-iZiFKNGg"
+                    class="window__play"
+                  >
+                    <svg width="12" height="14" class="window__play-arrow">
+                      <use xlink:href="img/icons.svg#play-arrow"></use>
+                    </svg>
+                    <svg width="50" height="50" class="window__play-border">
+                      <use xlink:href="img/icons.svg#play-border"></use>
+                    </svg>
+                  </button>
+                  <div class="window__info">
+                    <span class="window__media-title"
+                      >The chalk cliff of Beachy Head</span
+                    >
+                    <span class="window__timer">18:05</span>
+                  </div>
+                  <!-- /.window__info -->
+                </div>
+                <!-- /.window__buttons -->
+              </div>
+              <!-- /.window__content -->
+            </div>
+            <!-- /.window__wrapper -->
+            <div class="window__wrapper">
+              <div class="window__gradient"></div>
+              <!-- /.window__gradient -->
+              <img
+                src="img/hero/image-1.jpg"
+                alt="image: In Southeast England, White Cliffs and Fish"
+                class="window__img"
+              />
+              <div class="window__content">
+                <div class="window__user">
+                  <img
+                    src="img/hero/avatar-1.png"
+                    alt="avatar: Benjamin Turner"
+                    class="window__avatar"
+                  />
+                  <div class="window__user-info">
+                    <span class="window__author">By Benjamin Turner</span>
+                    <span class="window__status">Traveler</span>
+                  </div>
+                  <!-- /.window__user-info -->
+                </div>
+                <!-- /.window__user -->
+                <span class="window__tag">Destinations</span>
+                <h2 class="window__title">
+                  In Southeast England, White Cliffs and Fish
+                </h2>
+                <div class="window__buttons">
+                  <a href="firstpost.html" class="window__button">
+                    <span class="window__button-text">Read more</span>
+                    <svg width="15" height="7" class="window__arrow">
+                      <use xlink:href="img/icons.svg#read-more"></use>
+                    </svg>
+                  </a>
+                </div>
+                <!-- /.window__buttons -->
+              </div>
+              <!-- /.window__content -->
+            </div>
+            <!-- /.window__wrapper -->
           </div>
           <!-- /.hero__window -->
           <div class="hero__tabs tabs">
             <span class="tabs__title">Recommended for you</span>
-            <div class="tabs__card tabs__card--active">
+            <a href="#" class="tabs__card tabs__card--active" data-id="1">
               <span class="tabs__card-tag tabs__card-tag--bluegreen">Food</span>
               <div class="tabs__card-info">
                 <span class="tabs__card-text"
@@ -245,9 +428,9 @@
                 </svg>
               </div>
               <!-- /.tabs__card-info -->
-            </div>
+            </a>
             <!-- /.tabs__card -->
-            <div class="tabs__card">
+            <a href="#" class="tabs__card" data-id="2">
               <span class="tabs__card-tag tabs__card-tag--greyblue">Cars</span>
               <div class="tabs__card-info">
                 <span class="tabs__card-text"
@@ -255,9 +438,9 @@
                 >
               </div>
               <!-- /.tabs__card-info -->
-            </div>
+            </a>
             <!-- /.tabs__card -->
-            <div class="tabs__card">
+            <a href="#" class="tabs__card" data-id="3">
               <span class="tabs__card-tag tabs__card-tag--purple">Movies</span>
               <div class="tabs__card-info">
                 <span class="tabs__card-text"
@@ -266,9 +449,9 @@
                 >
               </div>
               <!-- /.tabs__card-info -->
-            </div>
+            </a>
             <!-- /.tabs__card -->
-            <div class="tabs__card">
+            <a href="#" class="tabs__card" data-id="4">
               <span class="tabs__card-tag tabs__card-tag--orange">NFL</span>
               <div class="tabs__card-info">
                 <span class="tabs__card-text"
@@ -279,9 +462,9 @@
                 </svg>
               </div>
               <!-- /.tabs__card-info -->
-            </div>
+            </a>
             <!-- /.tabs__card -->
-            <div class="tabs__card">
+            <a href="#" class="tabs__card" data-id="5">
               <span class="tabs__card-tag tabs__card-tag--green"
                 >Tech Reviews</span
               >
@@ -291,7 +474,7 @@
                 >
               </div>
               <!-- /.tabs__card-info -->
-            </div>
+            </a>
             <!-- /.tabs__card -->
           </div>
           <!-- /.hero__tabs -->
@@ -300,6 +483,8 @@
       </div>
       <!-- /.container -->
     </section>
+    <script src="js/jquery-3.5.1.min.js"></script>
+    <script src="js/jquery.fancybox.min.js"></script>
     <script src="js/main.js"></script>
   </body>
 </html>
