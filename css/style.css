@@ -542,8 +542,8 @@ button {
 }
 
 .burger--active span:nth-child(1) {
-  -webkit-transform: rotate(45deg) translate(4px, 7px);
-          transform: rotate(45deg) translate(4px, 7px);
+  -webkit-transform: rotate(45deg) translate(3px, 6px);
+          transform: rotate(45deg) translate(3px, 6px);
 }
 
 .burger--active span:nth-child(2) {
@@ -551,8 +551,8 @@ button {
 }
 
 .burger--active span:nth-child(3) {
-  -webkit-transform: rotate(-45deg) translate(2px, -5px);
-          transform: rotate(-45deg) translate(2px, -5px);
+  -webkit-transform: rotate(-45deg) translate(2px, -6px);
+          transform: rotate(-45deg) translate(2px, -6px);
 }
 
 .search__icon {
@@ -644,9 +644,9 @@ button {
   z-index: 50;
   left: 0;
   right: 0;
-  height: 104px;
+  height: 114px;
   top: 50px;
-  padding-top: 56px;
+  padding-top: 65px;
   display: block;
 }
 
@@ -1005,6 +1005,131 @@ button {
 
 .tabs__icon {
   vertical-align: middle;
+}
+
+.table-wrapper {
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: (263px)[4];
+      grid-template-columns: repeat(4, 263px);
+  -ms-grid-rows: (170px)[4];
+      grid-template-rows: repeat(4, 170px);
+  grid-gap: 30px;
+  padding-bottom: 60px;
+}
+
+.table-card {
+  background-color: #ffffff;
+  border-radius: 10px;
+  text-decoration: none;
+  color: #4B5157;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+.table-card__info {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  max-width: 249px;
+}
+
+.table-card__title {
+  margin: 0 0 5px 0;
+  font-family: Roboto Slab;
+  font-weight: bold;
+  font-size: 16px;
+  line-height: 25px;
+  color: #262D33;
+}
+
+.table-card__title--big {
+  font-size: 25px;
+  line-height: 30px;
+  max-width: 230px;
+  margin-top: 20px;
+  margin-bottom: 25px;
+}
+
+.table-card__text {
+  margin: 0 0 10px 0;
+}
+
+.table-card__subtext {
+  font-size: 12px;
+  line-height: 15px;
+  color: #939699;
+}
+
+.table-card__tag {
+  font-size: 12px;
+  line-height: 15px;
+  font-weight: 900;
+}
+
+.table-card__tag--greyblue {
+  color: #6E99AE;
+}
+
+.table-card__tag--purple {
+  color: #E7D9FF;
+}
+
+.table__card {
+  padding: 25px 25px 30px 25px;
+}
+
+.table__card--big {
+  background-image: url("../img/table/car.png");
+  background-repeat: no-repeat;
+  background-position: right 15px;
+  -ms-grid-row: 1;
+  -ms-grid-row-span: 2;
+  grid-row: 1 / 3;
+  -ms-grid-column: 1;
+  -ms-grid-column-span: 2;
+  grid-column: 1 / 3;
+}
+
+.table__card--popular {
+  -ms-grid-row: 1;
+  -ms-grid-row-span: 2;
+  grid-row: 1 / 3;
+  -ms-grid-column: 3;
+  -ms-grid-column-span: 1;
+  grid-column: 3 / 4;
+}
+
+.table__card--medium {
+  -ms-grid-row: 3;
+  -ms-grid-row-span: 2;
+  grid-row: 3 / 5;
+  -ms-grid-column: 1;
+  -ms-grid-column-span: 1;
+  grid-column: 1 / 2;
+}
+
+.table-columns {
+  -ms-grid-row: 1;
+  -ms-grid-row-span: 4;
+  grid-row: 1 / 5;
+  -ms-grid-column: 4;
+  -ms-grid-column-span: 1;
+  grid-column: 4 / 5;
+  background-color: #6E99AE;
+  border-radius: 10px;
 }
 
 @media (max-width: 1200px) {
