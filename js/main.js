@@ -5,12 +5,13 @@ document.addEventListener('DOMContentLoaded', () => {
   let clientWidth = document.documentElement.clientWidth;
   const menuButton = document.querySelector('.burger');
   const mobileMenu = document.querySelector('.menu-wrapper');
+  const desctopMenu = document.querySelector('.menu-desktop');
 
   window.addEventListener('resize', function () {
     clientWidth = document.documentElement.clientWidth;
   });
 
-  let count = -130;
+  let count = -100;
   const animateMenu = () => {
     mobileMenu.style.top = count + '%';
     count += 3;
@@ -18,7 +19,7 @@ document.addEventListener('DOMContentLoaded', () => {
     if (count < 0) {
       requestAnimationFrame(animateMenu);
     } else {
-      count = -130;
+      count = -100;
     }
   };
 
@@ -26,18 +27,21 @@ document.addEventListener('DOMContentLoaded', () => {
   menuButton.addEventListener('click', () => {
     if (clientWidth < 768) {
       mobileMenu.classList.toggle('menu-wrapper--visible');
-      count = -130;
-      mobileMenu.style.top = count + '%';
-      requestAnimationFrame(animateMenu);
+      if (mobileMenu.classList.contains('menu-wrapper--visible')) {
+        count = -100;
+        mobileMenu.style.top = count + '%';
+        requestAnimationFrame(animateMenu);
+      }
       // Убираем скрол при открытом мобильном меню
       body.classList.toggle('no-scroll');
 
       menuButton.classList.toggle('burger--active');
+
+      // Убираем скрол при открытом мобильном меню
+      body.classList.toggle('no-scroll');
     } else {
-      mobileMenu.classList.toggle('menu-wrapper--desktop');
-      count = -50;
-      mobileMenu.style.top = count + '%';
-      requestAnimationFrame(animateMenu);
+      desctopMenu.classList.toggle('menu-desktop--active');
+
       menuButton.classList.toggle('burger--active');
     }
   });

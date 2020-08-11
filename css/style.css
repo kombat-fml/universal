@@ -397,6 +397,7 @@ button {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+  position: relative;
 }
 
 .header__top-right {
@@ -474,6 +475,13 @@ button {
   margin: 0;
 }
 
+.header__menu-desktop {
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
 .header-menu {
   list-style-type: none;
   padding: 17px 0;
@@ -494,6 +502,10 @@ button {
   color: inherit;
   text-transform: uppercase;
   font-weight: 900;
+}
+
+.header-menu__item--desktop {
+  margin-bottom: 15px;
 }
 
 .header__outer {
@@ -541,16 +553,20 @@ button {
   width: 14px;
 }
 
-.burger--active span:nth-child(1) {
+.burger:hover .burger__line:nth-child(2) {
+  opacity: 0;
+}
+
+.burger--active .burger__line:nth-child(1) {
   -webkit-transform: rotate(45deg) translate(3px, 6px);
           transform: rotate(45deg) translate(3px, 6px);
 }
 
-.burger--active span:nth-child(2) {
+.burger--active .burger__line:nth-child(2) {
   opacity: 0;
 }
 
-.burger--active span:nth-child(3) {
+.burger--active .burger__line:nth-child(3) {
   -webkit-transform: rotate(-45deg) translate(2px, -6px);
           transform: rotate(-45deg) translate(2px, -6px);
 }
@@ -632,30 +648,21 @@ button {
 }
 
 .menu-desktop {
-  background-color: #262D33;
-}
-
-.menu-wrapper {
   display: none;
   background-color: #262D33;
+  position: absolute;
+  top: 50px;
+  left: 0;
+  z-index: 25;
+  width: 150px;
 }
 
-.menu-wrapper--desktop {
-  position: fixed;
-  z-index: 50;
-  left: 0;
-  right: 0;
-  height: 500px;
-  top: 50px;
-  padding-top: 65px;
+.menu-desktop--active {
   display: block;
 }
 
-.menu-wrapper--desktop .header__menu {
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
+.menu-wrapper {
+  background-color: #262D33;
 }
 
 .outer {
@@ -1264,15 +1271,13 @@ button {
     max-width: 576px;
     width: 92%;
   }
-  .menu-desktop {
-    display: none;
-  }
   .menu-wrapper {
     display: none;
     position: fixed;
     left: 0;
     right: 0;
-    height: 500px;
+    bottom: 0;
+    z-index: 50;
     top: 50px;
   }
   .menu-wrapper--visible {

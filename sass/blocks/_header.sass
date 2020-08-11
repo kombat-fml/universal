@@ -16,6 +16,7 @@
       height: 50px
     &-left
       display: flex
+      position: relative
     &-right
       display: flex
   &__burger
@@ -53,6 +54,8 @@
     margin-right: 10px
   &__menu
     margin: 0
+    &-desktop
+      flex-direction: column
   &-menu
     list-style-type: none
     padding: 17px 0
@@ -65,6 +68,9 @@
       color: inherit
       text-transform: uppercase
       font-weight: 900
+    &__item
+      &--desktop
+        margin-bottom: 15px
   &__outer
     padding-top: 30px
 .burger
@@ -91,14 +97,20 @@
     background-color: $icon-color
     &:nth-child(2)
       width: 14px
+  &:hover
+    .burger
+      &__line
+        &:nth-child(2)
+          opacity: 0
   &--active
-    span
-      &:nth-child(1)
-        transform: rotate(45deg) translate(3px, 6px)
-      &:nth-child(2)
-        opacity: 0
-      &:nth-child(3)
-        transform: rotate(-45deg) translate(2px, -6px)
+    .burger
+      &__line
+        &:nth-child(1)
+          transform: rotate(45deg) translate(3px, 6px)
+        &:nth-child(2)
+          opacity: 0
+        &:nth-child(3)
+          transform: rotate(-45deg) translate(2px, -6px)
 .search
   &__icon
     margin-right: 10px
@@ -141,33 +153,17 @@
     font-weight: normal
 .menu
   &-desktop
-    background-color: $dark
-  &-wrapper
     display: none
     background-color: $dark
-    &--desktop
-      position: fixed
-      z-index: 50
-      left: 0
-      right: 0
-      height: 500px
-      top: 50px
-      padding-top: 65px
+    position: absolute
+    top: 50px
+    left: 0
+    z-index: 25
+    width: 150px
+    &--active
       display: block
-      .header
-        &__menu
-          flex-direction: column
-
-      // display: none
-      // position: fixed
-      // left: 0
-      // right: 0
-      // height: 500px
-      // top: 50px
-      // &--visible
-      //   padding: 70px 0 20px 0
-      //   display: block
-      //   overflow: auto
+  &-wrapper
+    background-color: $dark
 .outer
   background-color: $dark
   height: 475px
