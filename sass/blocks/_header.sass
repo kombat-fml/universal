@@ -138,8 +138,20 @@
     margin-left: 10px
     font-weight: normal
 .menu
-  &-wrapper
+  &-desktop
     background-color: $dark
+  &-wrapper
+    display: none
+    background-color: $dark
+    &--desktop
+      position: fixed
+      z-index: 50
+      left: 0
+      right: 0
+      height: 104px
+      top: 50px
+      padding-top: 56px
+      display: block
 .outer
   background-color: $dark
   height: 475px

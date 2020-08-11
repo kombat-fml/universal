@@ -10,20 +10,7 @@ document.addEventListener('DOMContentLoaded', () => {
     clientWidth = document.documentElement.clientWidth;
   });
 
-  //открытие и закрытие мобильного меню
-  menuButton.addEventListener('click', () => {
-    if (clientWidth < 768) {
-      mobileMenu.classList.toggle('menu-wrapper--visible');
-      requestAnimationFrame(animateMenu);
-      // Убираем скрол при открытом мобильном меню
-      body.classList.toggle('no-scroll');
-
-      menuButton.classList.toggle('burger--active');
-    }
-  });
-
   let count = -130;
-  mobileMenu.style.top = count + '%';
   const animateMenu = () => {
     mobileMenu.style.top = count + '%';
     count += 3;
@@ -34,6 +21,26 @@ document.addEventListener('DOMContentLoaded', () => {
       count = -130;
     }
   };
+
+  //открытие и закрытие мобильного меню
+  menuButton.addEventListener('click', () => {
+    if (clientWidth < 768) {
+      mobileMenu.classList.toggle('menu-wrapper--visible');
+      count = -130;
+      mobileMenu.style.top = count + '%';
+      requestAnimationFrame(animateMenu);
+      // Убираем скрол при открытом мобильном меню
+      body.classList.toggle('no-scroll');
+
+      menuButton.classList.toggle('burger--active');
+    } else {
+      mobileMenu.classList.toggle('menu-wrapper--desktop');
+      count = -50;
+      mobileMenu.style.top = count + '%';
+      requestAnimationFrame(animateMenu);
+      menuButton.classList.toggle('burger--active');
+    }
+  });
 
   //табы
   const tabs = document.getElementsByClassName('tabs__card');

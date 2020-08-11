@@ -630,8 +630,24 @@ button {
   font-weight: normal;
 }
 
-.menu-wrapper {
+.menu-desktop {
   background-color: #262D33;
+}
+
+.menu-wrapper {
+  display: none;
+  background-color: #262D33;
+}
+
+.menu-wrapper--desktop {
+  position: fixed;
+  z-index: 50;
+  left: 0;
+  right: 0;
+  height: 104px;
+  top: 50px;
+  padding-top: 56px;
+  display: block;
 }
 
 .outer {
@@ -835,11 +851,23 @@ button {
   background-color: #4592FF;
   margin-right: 30px;
   text-decoration: none;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  max-width: 140px;
 }
 
 .window__button-text {
   color: #ffffff;
   margin-right: 5px;
+}
+
+.window__arrow {
+  -ms-flex-negative: 0;
+      flex-shrink: 0;
 }
 
 .window__play {
@@ -1055,6 +1083,27 @@ button {
   .hero__window {
     width: 450px;
   }
+  .window__user {
+    margin-bottom: 120px;
+  }
+  .window__title {
+    font-size: 28px;
+    line-height: 35px;
+  }
+  .window__buttons {
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+  }
+  .window__button {
+    -webkit-box-ordinal-group: 3;
+        -ms-flex-order: 2;
+            order: 2;
+    margin-top: 30px;
+  }
+  .window__info {
+    -ms-flex-preferred-size: 80%;
+        flex-basis: 80%;
+  }
 }
 
 @media (max-width: 767px) {
@@ -1066,6 +1115,9 @@ button {
     max-width: 576px;
     width: 92%;
   }
+  .menu-desktop {
+    display: none;
+  }
   .menu-wrapper {
     display: none;
     position: fixed;
@@ -1075,7 +1127,7 @@ button {
     top: 50px;
   }
   .menu-wrapper--visible {
-    padding: 20px 0 20px 0;
+    padding: 70px 0 20px 0;
     display: block;
     overflow: auto;
   }
@@ -1100,6 +1152,9 @@ button {
   .burger__title {
     display: none;
   }
+  .outer {
+    height: 750px;
+  }
   .outer__wrapper {
     max-width: 350px;
     width: 92%;
@@ -1111,6 +1166,12 @@ button {
   }
   .outer__card:nth-child(3) {
     margin-bottom: 30px;
+  }
+  .hero__window {
+    width: 100%;
+  }
+  .hero__tabs {
+    display: none;
   }
 }
 
@@ -1133,6 +1194,13 @@ button {
   }
   .search__input {
     max-width: 100px;
+  }
+  .window__content {
+    padding: 25px 25px 30px 25px;
+  }
+  .window__info {
+    -ms-flex-preferred-size: 75%;
+        flex-basis: 75%;
   }
 }
 /*# sourceMappingURL=style.css.map */
