@@ -31,3 +31,29 @@
         padding-right: 0
       &:nth-child(3)
         margin-bottom: 30px
+  .table
+    &-wrapper
+      grid-template-columns: repeat(2, 48%)
+      grid-template-rows: repeat(7, 180px)
+      grid-row-gap: 20px
+      grid-column-gap: 20px
+      justify-content: center
+    &-card
+      &__image
+        height: 250px
+      &__info
+        &--medium
+          top: 270px
+          left: 20px
+          right: 20px
+      &__subtext
+        &--date
+          flex-basis: 100%
+          margin-bottom: 2px
+      &__title
+        &--popular
+          margin-bottom: 80px
+      &__footer
+        padding-right: 20px
+    &__card
+      padding: 20px

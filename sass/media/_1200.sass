@@ -23,3 +23,21 @@
   .hero
     &__window
       width: 700px
+  .table
+    &-wrapper
+      grid-template-columns: repeat(4, 225px)
+      grid-template-rows: repeat(4, 190px)
+      grid-gap: 20px
+    &-card
+      &__cite
+        max-width: 200px
+      &__subtext
+        &--date
+          flex-basis: 100%
+          margin-bottom: 2px
+      &__image
+        height: 270px
+    &__card
+      &--big
+        background-size: 50%
+        background-position: right 40px

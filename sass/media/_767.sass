@@ -54,3 +54,20 @@
     &__card
       &--active
         background-color: $white
+  .table
+    &-wrapper
+      grid-template-columns: repeat(2, 255px)
+      grid-template-rows: repeat(7, 170px)
+      grid-row-gap: 20px
+      grid-column-gap: 20px
+      justify-content: center
+    &-card
+      &__footer
+        &--big
+          display: none
+    &-columns
+      &__card
+        &--first
+          margin-top: 35px
+      &__user
+        margin-bottom: 25px
