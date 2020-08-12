@@ -20,13 +20,18 @@
     &__input
       width: 180px
   .outer
+    height: 560px
     &__wrapper
       max-width: 700px
+      flex-wrap: wrap
     &__card
-      &:nth-child(2n+1)
-        max-width: 326px
-      &:nth-child(2n)
-        max-width: 300px
+      flex-basis: 46%
+      &:nth-child(1)
+        margin-bottom: 30px
+      &:nth-child(2)
+        margin-bottom: 30px
+        &:after
+          content: none
     &__title
       font-size: 14px
       line-height: 20px

@@ -177,20 +177,25 @@
     padding: 25px 25px 30px 25px
   &__card
     text-decoration: none
-    max-width: 260px
     display: flex
     align-items: center
     justify-content: space-between
+    position: relative
+    flex-basis: calc(25% - 38px)
     &:not(:last-child)
-      padding-right: 25px
-      border-right: 1px solid $text-regular
+      &:after
+        content: ''
+        position: absolute
+        width: 1px
+        height: 75px
+        right: -25px
+        background-color: $text-regular
   &__title
     font-family: Roboto Slab
     font-weight: bold
     font-size: 16px
     line-height: 25px
     color: $white
-    max-width: 155px
     margin: 0
   &__img
     width: 65px
