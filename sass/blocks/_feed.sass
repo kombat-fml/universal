@@ -56,6 +56,10 @@
       text-decoration: none
     &__text
       margin: 0
+      display: -webkit-box
+      -webkit-line-clamp: 3
+      -webkit-box-orient: vertical
+      overflow: hidden
     &__footer
       display: flex
       align-items: center
@@ -75,6 +79,7 @@
     position: relative
     background-color: $white
     border-radius: 10px
+    overflow: hidden
     &__head
       padding: 20px 25px 19px 25px
       border-bottom: 1px solid #D9DADB
@@ -83,6 +88,7 @@
       color: $dark
       font-weight: 900
     &__post
+      text-decoration: none
       display: flex
       margin: 0 25px
       padding: 17px 0
@@ -98,6 +104,7 @@
       display: flex
       flex-direction: column
     &__title
+      color: $text-regular
       margin-bottom: 5px
     &__icon
       position: absolute
