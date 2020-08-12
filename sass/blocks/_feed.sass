@@ -1,0 +1,117 @@
+.feed
+  padding: 60px 0
+  &-wrapper
+    display: flex
+    align-items: start
+  &__cards
+    max-width: 850px
+    background-color: $white
+    border-radius: 10px
+    overflow: hidden
+    margin-right: 30px
+  &__link
+    color: inherit
+    text-decoration: none
+    flex-shrink: 0
+    margin-right: 25px
+    line-height: 0
+  &__image
+    object-fit: cover
+  &__card
+    padding: 25px
+    display: flex
+    position: relative
+    &:not(:last-child)
+      &::after
+        content: ''
+        position: absolute
+        bottom: 0
+        width: calc(100% - 50px)
+        height: 1px
+        background-color: #D9DADB
+  &-card
+    &__content
+      display: flex
+      flex-wrap: wrap
+      align-items: start
+      justify-content: space-between
+    &__title
+      flex-basis: 100%
+      font-family: Roboto Slab
+      font-style: normal
+      font-weight: bold
+      font-size: 20px
+      line-height: 25px
+      color: $dark
+      margin: 0 0 10px 0
+    &__bookmark
+      position: relative
+      cursor: pointer
+      &-icon
+        position: absolute
+        left: -1px
+        top: 0
+    &__link
+      color: inherit
+      text-decoration: none
+    &__text
+      margin: 0
+    &__footer
+      display: flex
+      align-items: center
+      align-self: end
+    &__subtext
+      margin-right: 10px
+    &__icon
+      margin-right: 5px
+    &__checkbox
+      transform: scale(0.5)
+      &:checked
+        &+.bookmark
+          fill: $red
+  &-column
+    display: flex
+    flex-direction: column
+    position: relative
+    background-color: $white
+    border-radius: 10px
+    &__head
+      padding: 20px 25px 19px 25px
+      border-bottom: 1px solid #D9DADB
+      letter-spacing: 0.5px
+      text-transform: uppercase
+      color: $dark
+      font-weight: 900
+    &__post
+      display: flex
+      margin: 0 25px
+      padding: 17px 0
+      &:not(:last-child)
+        border-bottom: 1px solid #D9DADB
+    &__img
+      width: 60px
+      height: 60px
+      object-fit: cover
+      margin-right: 10px
+    &__info
+      position: relative
+      display: flex
+      flex-direction: column
+    &__title
+      margin-bottom: 5px
+    &__icon
+      position: absolute
+      right: 0
+      top: 50%
+      transform: translateY(-50%)
+      opacity: 0.08
+    &__footer
+      text-align: center
+      text-decoration: none
+      color: $dark
+      padding: 11px 0 14px 0
+      font-weight: 900
+      border-top: 1px solid #D9DADB
+
+
+  
