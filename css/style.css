@@ -1656,6 +1656,19 @@ button {
   fill: #FF4F52;
 }
 
+.feed-card__comments {
+  text-decoration: none;
+  color: inherit;
+  line-height: 0;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: end;
+      -ms-flex-align: end;
+          align-items: end;
+  margin-right: 10px;
+}
+
 .feed-column {
   display: -webkit-box;
   display: -ms-flexbox;
