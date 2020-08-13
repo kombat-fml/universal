@@ -87,3 +87,22 @@
     &__title
       font-size: 32px
       line-height: 38px
+  .footer
+    &-social
+      flex-wrap: wrap
+    &-submenu
+      order: -1
+      flex-basis: 100%
+      margin-bottom: 25px
+      &__item
+        flex-basis: 25% 
+        &:not(:last-child)
+          margin-right: 0
+        &:nth-child(1), &:nth-child(2)
+          margin-bottom: 0px
+    &-copyright
+      flex-wrap: wrap
+      &__text
+        max-width: 700px
+        &:nth-child(1)
+          margin-bottom: 8px

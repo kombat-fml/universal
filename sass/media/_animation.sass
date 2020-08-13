@@ -77,3 +77,43 @@
         &__line
           &:nth-child(2)
             opacity: 0
+  .footer
+    &-menu
+      &__link
+        transition: all 0.2s ease-in-out
+        &:focus, &:hover
+          padding-left: 10px
+          background-color: $gray
+          border-radius: 13px 0 0 13px
+    &-submenu
+      &__item
+        display: inline-block
+        transition: all 0.2s
+        position: relative
+        &:after
+          position: absolute
+          left: 50%
+          display: block
+          content: ""
+          height: 1px
+          width: 0%
+          background-color: $dark
+          transition: width 0.2s ease-out
+          transform: translateX(-50%)
+        &:focus:after, &:hover:after
+          width: 100%
+    &-social
+      &__link
+        transition: all 0.3s
+        &--facebook
+          &:hover
+            background-color: $dark
+        &--instagram
+          &:hover
+            background-color: $blue
+        &--youtube
+          &:hover
+            background-color: $dark
+        &--twitter
+          &:hover
+            background-color: $dark
