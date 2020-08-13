@@ -78,9 +78,9 @@ document.addEventListener('DOMContentLoaded', () => {
     direction: 'horizontal',
     loop: true,
 
-    // autoplay: {
-    //   delay: 3000,
-    // },
+    autoplay: {
+      delay: 3000,
+    },
 
     // If we need pagination
     pagination: {

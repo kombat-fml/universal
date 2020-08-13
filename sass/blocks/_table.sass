@@ -189,18 +189,25 @@
       &--last
         position: absolute
         bottom: 45px
+    &__content
+      display: flex
+      flex-direction: column
+      align-items: center
+      justify-content: space-evenly
+      height: calc(100% - 105px)
+      padding: 0 25px
     &__card
       text-decoration: none
-      margin: 20px 25px 25px 25px
-      &--first
-        margin-top: 45px
-      &--last
-        margin-bottom: 5px
+      margin-top: 45px
+      &:not(:last-child)
+        padding-bottom: 39px
+        border-bottom: 1px solid rgba(180, 209, 224, 0.5)
+      &:last-child
+        margin-bottom: 39px
     &__user
       display: flex
       align-items: center
       margin-left: 10px
-      margin-bottom: 39px
     &__info
       display: flex
       flex-direction: column
