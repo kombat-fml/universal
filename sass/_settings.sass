@@ -22,7 +22,7 @@ button
   text-decoration: none
   display: flex
   align-items: center
-  max-width: 140px
+  font-weight: 900
   &__arrow
     margin-top: 3px
   &-text
@@ -42,6 +42,8 @@ button
     color: $red
   &--purple
     color: $purple
+  &--greyblue
+    color: $greyblue
 .subtext
   font-size: 12px
   line-height: 15px
@@ -52,3 +54,36 @@ button
       fill: $gray
 .bookmark
   fill: #BCBFC2
+.comments
+  &-icon
+    fill: #BCBFC2
+    &--white
+      fill: $white
+.link
+  text-decoration: none
+  color: inherit
+.label
+  color: $white
+  border-radius: 3px
+  font-size: 12px
+  line-height: 15px
+  padding: 5px 12px
+  font-weight: 900
+  &--red
+    background-color: $red
+  &--green
+    background-color: $green
+.avatar
+  border-radius: 50%
+.author
+  &--white
+    color: $white
+    mix-blend-mode: normal
+    opacity: 0.85
+.status
+  font-size: 12px
+  line-height: 15px
+  &--white
+    color: $white
+    mix-blend-mode: normal
+    opacity: 0.4

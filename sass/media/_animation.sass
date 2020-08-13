@@ -1,9 +1,11 @@
 @media (min-width: 993px)
   .tabs, .window
     &__play
+      transition: all 0.2s
       &:hover
         background-color: $gray
   .button
+    transition: all 0.2s
     &:hover
       background-color: $blue*0.5
   .header
@@ -32,9 +34,40 @@
         transition: width 0.2s ease-in-out
       &:focus:before, &:hover:before
         width: 100%
+  .table
+    &-columns
+      &__link
+        transition: all 0.3s
+        &:hover
+          background-color: lighten($blue,15%)
+    &__card
+      &--big, &--popular, &--medium
+        &:before
+          position: absolute
+          z-index: 5
+          bottom: 0
+          top: 0
+          left: 0
+          right: 0
+          content: ""
+          opacity: 0.3
+          transition: background-color 0.2s ease-in
+        &:hover:before, &:focus:before
+          background-color: $blue
+    &-card
+      &--small
+        &:hover
+          padding: 23px 23px 28px 23px
+          border: 2px solid $blue
   .feed
     &-column
       &__post, &__footer
         transition: all 0.3s
         &:hover
           background-color: lighten($gray,15%)
+    &-card
+      &__comments
+        &:hover
+          & .comments
+            &-icon
+              fill: $blue

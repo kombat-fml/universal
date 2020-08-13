@@ -13,9 +13,12 @@
     display: flex
     flex-direction: column
     justify-content: space-between
+    padding: 25px 25px 30px 25px
+    overflow: hidden
     &__info
       display: flex
       flex-direction: column
+      align-items: start
       max-width: 249px
       &--medium
         position: absolute
@@ -146,8 +149,6 @@
       max-height: 275px
       object-fit: cover
   &__card
-    padding: 25px 25px 30px 25px
-    overflow: hidden
     &--big
       background-image: url("../img/table/car.png")
       background-repeat: no-repeat
@@ -168,6 +169,7 @@
     grid-column: 4 / 5
     background-color: #6E99AE
     border-radius: 10px
+    overflow: hidden
     display: flex
     flex-direction: column
     position: relative
@@ -202,6 +204,7 @@
       display: flex
       flex-direction: column
     &__cite
+      max-width: 210px
       font-family: Roboto Slab
       font-weight: bold
       font-size: 20px
