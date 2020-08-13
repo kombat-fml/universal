@@ -72,4 +72,23 @@ document.addEventListener('DOMContentLoaded', () => {
       }
     }
   }
+
+  var descSlider = new Swiper('.desc-slider', {
+    // Optional parameters
+    direction: 'horizontal',
+    loop: true,
+
+    // autoplay: {
+    //   delay: 3000,
+    // },
+
+    // If we need pagination
+    pagination: {
+      el: '.desc-slider__pagination',
+      type: 'bullets',
+      clickable: 'true',
+      bulletClass: 'desc-slider__bullet',
+      bulletActiveClass: 'desc-slider__bullet--active',
+    },
+  });
 });
