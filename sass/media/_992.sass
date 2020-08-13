@@ -26,12 +26,17 @@
       flex-wrap: wrap
     &__card
       flex-basis: 46%
-      &:nth-child(1)
-        margin-bottom: 30px
       &:nth-child(2)
-        margin-bottom: 30px
         &:after
           content: none
+      &:nth-child(1), &:nth-child(2)
+        &:before
+          content: ''
+          position: absolute
+          width: 100%
+          height: 1px
+          bottom: -15px
+          background-color: $text-regular
     &__title
       font-size: 14px
       line-height: 20px

@@ -24,11 +24,17 @@
     height: 700px
     &__card
       flex-basis: 100%
-      &:nth-child(3)
-        margin-bottom: 30px
       &:nth-child(1), &:nth-child(3)
         &:after
           content: none
+      &:nth-child(3)
+        &:before
+          content: ''
+          position: absolute
+          width: 100%
+          height: 1px
+          bottom: -15px
+          background-color: $text-regular
   .table
     &-wrapper
       grid-template-columns: repeat(2, 48%)
