@@ -91,4 +91,16 @@ document.addEventListener('DOMContentLoaded', () => {
       bulletActiveClass: 'desc-slider__bullet--active',
     },
   });
+
+  const like = document.querySelector('.like');
+  const likeCount = document.querySelector('.like__count');
+  like.addEventListener('click', (event) => {
+    event.preventDefault();
+    if (like.classList.contains('like--active')) {
+      likeCount.textContent = Number(likeCount.textContent) - 1;
+    } else {
+      likeCount.textContent = Number(likeCount.textContent) + 1;
+    }
+    like.classList.toggle('like--active');
+  });
 });

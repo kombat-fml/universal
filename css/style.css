@@ -2424,6 +2424,11 @@ button {
           align-items: center;
 }
 
+.like--active .like__icon {
+  fill: #FF4F52;
+  opacity: 0.6;
+}
+
 .article {
   padding-top: 45px;
   background-color: #ffffff;
@@ -3373,6 +3378,21 @@ button {
   }
   .subscribe__input {
     width: 130px;
+  }
+  .hero-post {
+    height: 650px;
+  }
+  .hero-post__wrapper {
+    height: 560px;
+  }
+  .hero-post__text {
+    font-size: 13px;
+    line-height: 18px;
+  }
+  .hero-post__title {
+    font-size: 28px;
+    line-height: 40px;
+    max-width: 380px;
   }
 }
 
