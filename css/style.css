@@ -2485,7 +2485,7 @@ button {
 
 .article-swiper {
   margin-top: 60px;
-  margin-bottom: 30px;
+  margin-bottom: 45px;
   width: 100%;
   height: 625px;
   border: 1px solid #D9DADB;
@@ -2603,11 +2603,9 @@ button {
 }
 
 .article__material {
-  position: absolute;
-  right: 0;
-  top: 150px;
   float: right;
   width: 263px;
+  margin-top: -70px;
 }
 
 .author-card {
@@ -3021,6 +3019,9 @@ button {
   }
   .article-swiper__text {
     max-width: 350px;
+  }
+  .article__material {
+    margin: 0 0 25px 25px;
   }
 }
 
@@ -3620,6 +3621,11 @@ button {
     -webkit-box-pack: space-evenly;
         -ms-flex-pack: space-evenly;
             justify-content: space-evenly;
+  }
+  .article__material {
+    float: none;
+    margin-left: auto;
+    margin-right: auto;
   }
   .author-card {
     float: none;
