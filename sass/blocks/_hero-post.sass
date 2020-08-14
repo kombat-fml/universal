@@ -6,14 +6,31 @@
     &__wrapper
       position: relative
       padding: 60px 0
-      height: 590px
+      height: 100%
       display: flex
       flex-direction: column
+    &__checkbox
+      opacity: 0.0
+      transform: scale(0.5)
+      &:checked
+        &+.hero
+          &-post
+            &__bookmark
+              &-icon
+                fill: $red
+                opacity: 0.6
     &__bookmark
+      position: absolute
+      left: -97px
+      top: 150px
+      height: 30px
+      width: 30px
+      cursor: pointer
       &-icon
         position: absolute
-        left: -97px
-        opacity: 0.4
+        left: 3px
+        fill: $white
+        opacity: 0.4  
     &__row
       display: flex
       align-items: center
@@ -66,6 +83,8 @@
       opacity: 0.85
       margin-top: 0
       margin-bottom: 60px
+      max-width: 560px
+      font-weight: normal
     &__footer
       display: flex
       align-items: center
@@ -80,7 +99,7 @@
         margin-right: 0
     &__button
       padding: 10px 25px 10px 20px
-      border: 1px solid rgba(255, 255, 255, 0.4);
+      border: 1px solid rgba(255, 255, 255, 0.4)
       border-radius: 20px
       text-decoration: none
       display: flex
