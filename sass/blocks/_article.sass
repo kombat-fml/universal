@@ -1,13 +1,16 @@
 .article
-  padding-top: 45px
+  padding-top: 60px
   background-color: $white
   &__wrapper
     position: relative
-    display: flex
-    align-items: start
-    justify-content: space-between
+    //display: flex
+    //align-items: start
+    //justify-content: space-between
+    //&--column
+      //display: block
+      // flex-direction: column
   &__author-card
-    margin-top: -145px
+    margin-top: -160px
     padding: 35px 25px 45px 25px
     background-color: $white
     position: relative
@@ -24,12 +27,14 @@
     float: left
     margin-right: 8px
     margin-left: -6px
-    margin-top: 15px
   &__text
     max-width: 625px
     font-size: 18px
     line-height: 30px
-    margin: 15px 10px 15px 0
+    margin-top: 0
+    margin-bottom: 30px
+    &--last
+      margin-bottom: 45px
   &__title
     &-text
       font-family: Roboto Slab
@@ -37,10 +42,10 @@
       font-size: 25px
       line-height: 30px
       color: $dark
-      margin-top: 30px
-      margin-bottom: 15px
+      margin-top: 0
+      margin-bottom: 30px
   &-swiper
-    margin-top: 45px
+    margin-top: 60px
     margin-bottom: 30px
     width: 100%
     height: 625px
@@ -105,8 +110,16 @@
     &__icon
       fill: $white
       opacity: 0.4
+  &__material
+    position: absolute
+    right: 0
+    top: 150px
+    float: right
+    width: 263px
 .author
   &-card
+    float: right
+    margin-left: 20px
     display: flex
     flex-direction: column
     align-items: center
@@ -153,4 +166,31 @@
       color: $dark
       font-weight: 900
       border-top: 1px solid #D9DADB
+.material
+  &__title
+    margin-top: 0
+    margin-bottom: 20px
+  &__image
+    border-radius: 10px
+    overflow: hidden
+    margin-bottom: 15px
+  &__subtitle
+    font-family: Roboto Slab
+    font-weight: bold
+    font-size: 16px
+    line-height: 25px
+    color: $dark
+    margin-bottom: 5px
+    display: block
+  &__text
+    margin-top: 0
+    margin-bottom: 20px
+  &__info
+    display: flex
+    align-items: center
+  &__icon
+    fill: $gray
+    margin-right: 5px
+  &__subtext
+    margin-right: 10px
 
