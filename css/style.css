@@ -2188,6 +2188,7 @@ button {
 }
 
 .footer-social__icon {
+  fill: #ffffff;
   margin: auto;
 }
 
@@ -2421,6 +2422,143 @@ button {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
+}
+
+.article {
+  padding-top: 45px;
+  background-color: #ffffff;
+}
+
+.article__wrapper {
+  position: relative;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: start;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+.article__author-card {
+  margin-top: -145px;
+  padding: 35px 25px 45px 25px;
+  background-color: #ffffff;
+  position: relative;
+  -ms-flex-negative: 0;
+      flex-shrink: 0;
+  width: 264px;
+  border: 1px solid #D9DADB;
+  border-radius: 10px;
+  overflow: hidden;
+}
+
+.article__letter {
+  font-size: 100px;
+  line-height: 88px;
+  font-weight: 900;
+  color: #4592FF;
+  float: left;
+  margin-right: 8px;
+  margin-left: -6px;
+  margin-top: 15px;
+}
+
+.article__text {
+  max-width: 625px;
+  font-size: 18px;
+  line-height: 30px;
+  margin: 15px 10px 15px 0;
+}
+
+.article__title-text {
+  font-family: Roboto Slab;
+  font-weight: bold;
+  font-size: 25px;
+  line-height: 30px;
+  color: #262D33;
+  margin-top: 30px;
+  margin-bottom: 15px;
+}
+
+.author-card {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.author-card__avatar {
+  border-radius: 50%;
+  margin-bottom: 15px;
+}
+
+.author-card__name {
+  font-family: Roboto Slab;
+  font-weight: bold;
+  font-size: 20px;
+  line-height: 25px;
+  color: #262D33;
+  margin-top: 0;
+  margin-bottom: 5px;
+}
+
+.author-card__status {
+  margin-bottom: 15px;
+}
+
+.author-card__count {
+  color: #262D33;
+  font-weight: 900;
+  margin-bottom: 25px;
+}
+
+.author-card__social {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  margin-bottom: 34px;
+}
+
+.author-card__link {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  height: 40px;
+  width: 40px;
+  text-decoration: none;
+  border: 1px solid #D9DADB;
+  border-radius: 50%;
+}
+
+.author-card__link:not(:last-child) {
+  margin-right: 10px;
+}
+
+.author-card__icon {
+  margin: auto;
+  fill: #BCBFC2;
+}
+
+.author-card__footer {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  text-align: center;
+  text-decoration: none;
+  padding: 12px 0;
+  color: #262D33;
+  font-weight: 900;
+  border-top: 1px solid #D9DADB;
 }
 
 @media (max-width: 1200px) {
@@ -2863,6 +3001,22 @@ button {
     font-size: 16px;
     line-height: 26px;
   }
+  .hero-post__footer {
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+    max-width: 270px;
+  }
+  .hero-post__button {
+    margin-top: 15px;
+  }
+  .article__letter {
+    font-size: 85px;
+    line-height: 75px;
+  }
+  .article__text {
+    font-size: 16px;
+    line-height: 26px;
+  }
 }
 
 @media (max-width: 576px) {
@@ -3013,7 +3167,7 @@ button {
             justify-content: end;
   }
   .hero-post {
-    height: 600px;
+    height: 680px;
   }
   .hero-post__row {
     margin-bottom: 0;
@@ -3056,13 +3210,13 @@ button {
     top: 49px;
     left: 120px;
   }
-  .hero-post__footer {
-    -ms-flex-wrap: wrap;
-        flex-wrap: wrap;
-    max-width: 270px;
+  .article__author-card {
+    position: absolute;
+    margin-top: -395px;
+    left: calc(50% - 132px);
   }
-  .hero-post__button {
-    margin-top: 15px;
+  .article__wrapper--first {
+    padding-top: 250px;
   }
 }
 
@@ -3359,6 +3513,16 @@ button {
   }
   .hero-post__button:hover {
     background-color: #939699;
+  }
+  .author-card__footer {
+    -webkit-transition: all 0.3s;
+    transition: all 0.3s;
+  }
+  .author-card__footer:hover {
+    background-color: #BCBFC2;
+  }
+  .author-card__link:hover .author-card__icon {
+    fill: #4592FF;
   }
 }
 /*# sourceMappingURL=style.css.map */

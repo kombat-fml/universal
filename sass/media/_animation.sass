@@ -129,3 +129,15 @@
       &__button
         &:hover
           background-color: $light
+  .author
+    &-card
+      &__footer
+        transition: all 0.3s
+        &:hover
+          background-color: $gray
+      &__link 
+        &:hover
+          & .author
+            &-card
+              &__icon
+                fill: $blue
