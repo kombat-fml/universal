@@ -12,8 +12,6 @@
     background-color: $white
     position: relative
     flex-shrink: 0
-    // position: absolute
-    // right: 0
     width: 264px
     border: 1px solid #D9DADB
     border-radius: 10px
@@ -41,6 +39,68 @@
       color: $dark
       margin-top: 30px
       margin-bottom: 15px
+  &-swiper
+    width: 100%
+    height: 625px
+    border: 1px solid #D9DADB
+    border-radius: 10px
+    overflow: hidden
+    display: flex
+    flex-direction: column
+    &__container
+      width: 100%
+      height: 555px
+      position: relative
+    &__wrapper
+      width: 100%
+      height: 100%
+    &__image
+      width: 100%
+      height: 100%
+      object-fit: cover
+    &__row
+      height: 70px
+      display: flex
+      justify-content: space-between
+      padding-left: 35px
+    &__text
+      align-self: center
+    &__user
+      text-decoration: none
+      display: flex
+      align-items: center
+      padding: 0 35px 0 30px
+      border-left: 1px solid #D9DADB
+    &__info
+      display: flex
+      flex-direction: column
+    &__avatar
+      border-radius: 50%
+      margin-right: 10px
+    &__author
+      color: $text-regular
+      margin-bottom: 2px
+    &__status
+      font-size: 12px
+      line-height: 15px
+      color: $light
+    &__button
+      background-color: transparent
+      border: none
+      position: absolute
+      top: 50%
+      transform: translateY(-50%)
+      padding: 0
+      height: 60px
+      width: 60px
+      z-index: 2
+      &--prev
+        left: 35px
+      &--next
+        right: 35px
+    &__icon
+      fill: $white
+      opacity: 0.4
 .author
   &-card
     display: flex
@@ -89,3 +149,4 @@
       color: $dark
       font-weight: 900
       border-top: 1px solid #D9DADB
+

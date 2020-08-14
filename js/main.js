@@ -92,6 +92,18 @@ document.addEventListener('DOMContentLoaded', () => {
     },
   });
 
+  var articleSlider = new Swiper('.article-swiper__container', {
+    // Optional parameters
+    direction: 'horizontal',
+    loop: true,
+
+    // Navigation arrows
+    navigation: {
+      nextEl: '.article-swiper__button--next',
+      prevEl: '.article-swiper__button--prev',
+    },
+  });
+
   const like = document.querySelector('.like');
   const likeCount = document.querySelector('.like__count');
   like.addEventListener('click', (event) => {
