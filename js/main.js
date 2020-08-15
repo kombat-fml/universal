@@ -46,7 +46,7 @@ document.addEventListener('DOMContentLoaded', () => {
     }
   });
 
-  //табы
+  //табы на главной странице
   const tabs = document.getElementsByClassName('tabs__card');
   const content = document.getElementsByClassName('window__wrapper');
 
@@ -73,6 +73,7 @@ document.addEventListener('DOMContentLoaded', () => {
     }
   }
 
+  //слайдер на главной странице
   var descSlider = new Swiper('.desc-slider', {
     // Optional parameters
     direction: 'horizontal',
@@ -92,6 +93,7 @@ document.addEventListener('DOMContentLoaded', () => {
     },
   });
 
+  // слайдер на странице с постом
   var articleSlider = new Swiper('.article-swiper__container', {
     // Optional parameters
     direction: 'horizontal',
@@ -104,6 +106,7 @@ document.addEventListener('DOMContentLoaded', () => {
     },
   });
 
+  // добавление лайка на странице с постом
   const like = document.querySelector('.like');
   const likeCount = document.querySelector('.like__count');
   like.addEventListener('click', (event) => {
@@ -115,4 +118,128 @@ document.addEventListener('DOMContentLoaded', () => {
     }
     like.classList.toggle('like--active');
   });
+
+  //подгрузка 3х комментариев на странице с постом
+  const comments = document.getElementsByClassName('comment--hidden');
+  const more = document.querySelector('.comments-body__more');
+
+  more.addEventListener('click', (event) => {
+    event.preventDefault();
+    [...comments].forEach((comment) =>
+      comment.classList.remove('comment--hidden')
+    );
+  });
+
+  //добавление лайков/дизлайков на странице с постом
+  const commentFooterLike = document.querySelectorAll('.comment-footer__like');
+  // const commentFooterCounter = document.querySelectorAll(
+  //   '.comment-footer__counter'
+  // );
+  const commentFooterDislike = document.querySelectorAll(
+    '.comment-footer__dislike'
+  );
+
+  [...commentFooterLike].forEach((like) =>
+    like.addEventListener('click', addLike)
+  );
+  [...commentFooterDislike].forEach((dislike) =>
+    dislike.addEventListener('click', addDislike)
+  );
+
+  // функция проверки кол-ва лайков и отрисовка числа соответствующего цвета
+  function colorCounter(element) {
+    console.log(element);
+    if (Number(element.textContent) > 0) {
+      element.classList.add('comment-footer__counter--green');
+    }
+    if (Number(element.textContent) < 0) {
+      element.classList.add('comment-footer__counter--red');
+    }
+    if (Number(element.textContent) == 0) {
+      element.classList.remove('comment-footer__counter--red');
+      element.classList.remove('comment-footer__counter--green');
+    }
+  }
+
+  //функция для конкатенации + числу
+  function concat(element) {
+    if (Number(element.textContent) > 0) {
+      element.textContent = '+' + Number(element.textContent);
+    }
+    if (Number(element.textContent) < 0) {
+      element.textContent = Number(element.textContent);
+    }
+  }
+
+  // нажатие на лайк
+  function addLike(event) {
+    event.preventDefault();
+    const target = event.target;
+
+    const selectorLikes = target
+      .closest('.comment-footer__like')
+      .parentNode.querySelector('.comment-footer__counter');
+
+    const selectorThumbUp = target
+      .closest('.comment-footer__like')
+      .parentNode.querySelector('.thumb-up');
+
+    const selectorThumbDown = target
+      .closest('.comment-footer__like')
+      .parentNode.querySelector('.thumb-down');
+
+    if (selectorThumbUp.classList.contains('thumb--active')) {
+      selectorThumbUp.classList.remove('thumb--active');
+      selectorLikes.textContent = Number(selectorLikes.textContent) - 1;
+      concat(selectorLikes);
+      colorCounter(selectorLikes);
+    } else {
+      if (selectorThumbDown.classList.contains('thumb--active')) {
+        selectorThumbDown.classList.remove('thumb--active');
+        selectorLikes.textContent = Number(selectorLikes.textContent) + 1;
+        concat(selectorLikes);
+        colorCounter(selectorLikes);
+      }
+      selectorThumbUp.classList.add('thumb--active');
+      selectorLikes.textContent = Number(selectorLikes.textContent) + 1;
+      concat(selectorLikes);
+      colorCounter(selectorLikes);
+    }
+  }
+
+  // нажатие на дизлайк
+  function addDislike(event) {
+    event.preventDefault();
+    const target = event.target;
+
+    const selectorLikes = target
+      .closest('.comment-footer__dislike')
+      .parentNode.querySelector('.comment-footer__counter');
+
+    const selectorThumbUp = target
+      .closest('.comment-footer__dislike')
+      .parentNode.querySelector('.thumb-up');
+
+    const selectorThumbDown = target
+      .closest('.comment-footer__dislike')
+      .parentNode.querySelector('.thumb-down');
+
+    if (selectorThumbDown.classList.contains('thumb--active')) {
+      selectorThumbDown.classList.remove('thumb--active');
+      selectorLikes.textContent = Number(selectorLikes.textContent) + 1;
+      concat(selectorLikes);
+      colorCounter(selectorLikes);
+    } else {
+      if (selectorThumbUp.classList.contains('thumb--active')) {
+        selectorThumbUp.classList.remove('thumb--active');
+        selectorLikes.textContent = Number(selectorLikes.textContent) - 1;
+        concat(selectorLikes);
+        colorCounter(selectorLikes);
+      }
+      selectorThumbDown.classList.add('thumb--active');
+      selectorLikes.textContent = Number(selectorLikes.textContent) - 1;
+      concat(selectorLikes);
+      colorCounter(selectorLikes);
+    }
+  }
 });
