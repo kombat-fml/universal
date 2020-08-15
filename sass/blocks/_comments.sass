@@ -33,6 +33,24 @@
     &__text
       font-weight: 900
       color: $dark
+  &-body
+    display: flex
+    flex-direction: column
+    &__more
+      text-decoration: none
+      margin-bottom: 60px
+      display: flex
+      align-items: center
+      justify-content: center
+      border: 1px solid #D9DADB
+      border-radius: 25px
+      padding: 15px
+      &-icon
+        margin-right: 8px
+        fill: #BCBFC2
+      &-text
+        font-weight: 900
+        color: $dark
 .comment
   display: flex
   align-items: start
@@ -103,3 +121,66 @@
   fill: #BCBFC2
   &--active
     fill: $blue
+.add
+  &-comment
+    background-color: #F5F5F5
+    border-radius: 10px
+    padding: 30px 40px 35px 30px
+    &__title
+      font-family: Roboto Slab
+      font-weight: bold
+      font-size: 20px
+      line-height: 25px
+      color: $dark
+      margin-top: 0
+      margin-bottom: 15px
+      padding-left: 95px
+    &__wrapper
+      display: flex
+    &__avatar
+      width: 75px
+      height: 75px
+      object-fit: cover
+      border-radius: 50%
+      margin-right: 20px
+    &__form
+      position: relative
+      z-index: 2
+      display: flex
+      align-items: start
+      flex-wrap: wrap
+      flex-basis: 100%
+      &::after
+        position: absolute
+        content: ''
+        width: 0
+        height: 0
+        left: -9px
+        top: 29px
+        z-index: 4
+        border-top: 9px solid transparent
+        border-bottom: 9px solid transparent
+        border-right: 11px solid $white
+      &::before
+        position: absolute
+        content: ''
+        width: 0
+        height: 0
+        left: -11px
+        top: 28px
+        z-index: 3
+        border-top: 10px solid transparent
+        border-bottom: 10px solid transparent
+        border-right: 12px solid #D9DADB
+    &__input
+      flex-basis: 100%
+      border: 1px solid #D9DADB
+      background-color: $white
+      border-radius: 5px
+      max-width: 585px
+      height: 130px
+      resize: none
+      margin-bottom: 15px
+      padding: 15px
+      
+
