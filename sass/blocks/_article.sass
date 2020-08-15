@@ -150,6 +150,79 @@
       line-height: 30px
     &__status
       color: $light
+  &__tags
+    display: flex
+    align-items: center
+    flex-wrap: wrap
+  &__tag
+    color: $dark
+    font-weight: 900
+    border: 1px solid #D9DADB
+    border-radius: 5px
+    padding: 5px 15px
+    margin: 15px 10px 15px 0
+  &__share
+    padding: 30px 0 75px 0
+    margin-top: 45px
+    max-width: 653px
+    border-top: 1px solid #D9DADB
+  &-share
+    display: flex
+    flex-wrap: wrap
+    &__title
+      flex-basis: 100%
+      color: $dark
+      font-family: Roboto Slab
+      font-weight: bold
+      font-size: 25px
+      line-height: 30px
+      margin-top: 0
+      margin-bottom: 25px
+    &__item
+      text-decoration: none
+      border-radius: 20px
+      padding: 10px 20px
+      text-align: center
+      display: flex
+      align-items: center
+      margin-right: 10px
+      margin-bottom: 15px
+      &--red
+        background-color: $red
+      &--violet
+        background-color: #4267B2
+      &--blue
+        background-color: #1DA1F2
+      &--dots
+        padding: 10px
+        margin-right: 0
+        border: 1px solid #D9DADB
+        width: 40px
+        height: 40px
+    &__icon
+      margin: auto
+      &--white
+        fill: $white
+      &-container
+        width: 20px
+        height: 20px
+        display: flex
+        margin-right: 10px
+    &__text
+      font-size: 14px
+      line-height: 20px
+      color: $white
+      font-weight: 900
+    &__count
+      font-size: 14px
+      line-height: 20px
+      margin: 0 5px
+      &--red
+        color: #FFC4C9
+      &--violet
+        color: #BBC6FF
+      &--blue
+        color: #C5E4FC
 .author
   &-card
     float: right
