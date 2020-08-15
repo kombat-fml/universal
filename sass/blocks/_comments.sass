@@ -1,0 +1,97 @@
+.comments
+  background-color: $white
+  padding: 60px 0 30px 0
+  &__wrapper
+    max-width: 750px
+    display: flex
+    flex-direction: column
+  &-header
+    margin-bottom: 30px
+    display: flex
+    align-items: center
+    &__title
+      font-family: Roboto Slab
+      font-weight: bold
+      font-size: 40px
+      line-height: 50px
+      color: $dark
+      margin: 0 10px 0 0
+    &__count
+      font-size: 40px
+      line-height: 50px
+      color: $light
+    &__link
+      text-decoration: none
+      padding: 10px 24px 10px 20px
+      border: 1px solid #D9DADB
+      border-radius: 20px
+      display: flex
+      align-items: center
+      margin-left: auto
+    &__icon
+      margin-right: 11px
+    &__text
+      font-weight: 900
+      color: $dark
+.comment
+  display: flex
+  align-items: start
+  border-top: 1px solid #D9DADB
+  padding-top: 20px
+  &--reply
+    padding-left: 90px
+  &__avatar
+    width: 75px
+    height: 75px
+    object-fit: cover
+    border-radius: 50%
+    margin-right: 15px
+  &__user
+    &-info
+      display: flex
+      align-items: baseline
+      margin-bottom: 10px
+  &__name
+    margin: 0
+    margin-right: 10px
+    font-family: Roboto Slab
+    font-weight: bold
+    font-size: 16px
+    line-height: 25px
+    color: $dark
+  &__date
+    font-size: 12px
+    line-height: 15px
+    color: $light
+  &__text
+    margin-top: 0
+    margin-bottom: 15px
+    max-width: 570px
+    font-size: 18px
+    line-height: 30px
+  &-footer
+    display: flex
+    &__reply
+      font-weight: 900
+      color: $dark
+      font-size: 12px
+      line-height: 15px
+      margin-right: 15px
+    &__counter
+      font-weight: 900
+      color: $light
+      margin: 0 10px
+      font-size: 12px
+      line-height: 15px
+      &--green
+        color: $green
+      &--red
+        color: $red
+    &__icon
+      margin-right: 5px
+      align-self: end
+.thumb
+  &-up
+    align-self: start
+  &-down
+    align-self: end

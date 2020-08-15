@@ -2687,17 +2687,18 @@ button {
 }
 
 .article__tag {
+  text-decoration: none;
   color: #262D33;
   font-weight: 900;
   border: 1px solid #D9DADB;
   border-radius: 5px;
   padding: 5px 15px;
-  margin: 15px 10px 15px 0;
+  margin: 15px 10px 0 0;
 }
 
 .article__share {
   padding: 30px 0 75px 0;
-  margin-top: 45px;
+  margin-top: 60px;
   max-width: 653px;
   border-top: 1px solid #D9DADB;
 }
@@ -2923,7 +2924,7 @@ button {
   margin-right: 10px;
 }
 
-.other-posts {
+.other-post {
   padding: 60px 0 90px 0;
   background-color: #F5F5F5;
 }
@@ -2999,6 +3000,177 @@ button {
 
 .other-post__subtext {
   margin-right: 10px;
+}
+
+.comments {
+  background-color: #ffffff;
+  padding: 60px 0 30px 0;
+}
+
+.comments__wrapper {
+  max-width: 750px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+.comments-header {
+  margin-bottom: 30px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.comments-header__title {
+  font-family: Roboto Slab;
+  font-weight: bold;
+  font-size: 40px;
+  line-height: 50px;
+  color: #262D33;
+  margin: 0 10px 0 0;
+}
+
+.comments-header__count {
+  font-size: 40px;
+  line-height: 50px;
+  color: #939699;
+}
+
+.comments-header__link {
+  text-decoration: none;
+  padding: 10px 24px 10px 20px;
+  border: 1px solid #D9DADB;
+  border-radius: 20px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  margin-left: auto;
+}
+
+.comments-header__icon {
+  margin-right: 11px;
+}
+
+.comments-header__text {
+  font-weight: 900;
+  color: #262D33;
+}
+
+.comment {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: start;
+  border-top: 1px solid #D9DADB;
+  padding-top: 20px;
+}
+
+.comment--reply {
+  padding-left: 90px;
+}
+
+.comment__avatar {
+  width: 75px;
+  height: 75px;
+  -o-object-fit: cover;
+     object-fit: cover;
+  border-radius: 50%;
+  margin-right: 15px;
+}
+
+.comment__user-info {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: baseline;
+      -ms-flex-align: baseline;
+          align-items: baseline;
+  margin-bottom: 10px;
+}
+
+.comment__name {
+  margin: 0;
+  margin-right: 10px;
+  font-family: Roboto Slab;
+  font-weight: bold;
+  font-size: 16px;
+  line-height: 25px;
+  color: #262D33;
+}
+
+.comment__date {
+  font-size: 12px;
+  line-height: 15px;
+  color: #939699;
+}
+
+.comment__text {
+  margin-top: 0;
+  margin-bottom: 15px;
+  max-width: 570px;
+  font-size: 18px;
+  line-height: 30px;
+}
+
+.comment-footer {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.comment-footer__reply {
+  font-weight: 900;
+  color: #262D33;
+  font-size: 12px;
+  line-height: 15px;
+  margin-right: 15px;
+}
+
+.comment-footer__counter {
+  font-weight: 900;
+  color: #939699;
+  margin: 0 10px;
+  font-size: 12px;
+  line-height: 15px;
+}
+
+.comment-footer__counter--green {
+  color: #3DC47E;
+}
+
+.comment-footer__counter--red {
+  color: #FF4F52;
+}
+
+.comment-footer__icon {
+  margin-right: 5px;
+  -ms-flex-item-align: end;
+      -ms-grid-row-align: end;
+      align-self: end;
+}
+
+.thumb-up {
+  -ms-flex-item-align: start;
+      -ms-grid-row-align: start;
+      align-self: start;
+}
+
+.thumb-down {
+  -ms-flex-item-align: end;
+      -ms-grid-row-align: end;
+      align-self: end;
 }
 
 @media (max-width: 1200px) {
@@ -3292,7 +3464,7 @@ button {
   .article__material {
     margin: 0 0 25px 25px;
   }
-  .other-posts {
+  .other-post {
     padding-bottom: 50px;
   }
   .other-post__wrapper {
@@ -3954,7 +4126,7 @@ button {
     margin-right: auto;
     margin-bottom: 20px;
   }
-  .other-posts {
+  .other-post {
     padding-bottom: 30px;
   }
   .other-post__card {
@@ -4111,6 +4283,13 @@ button {
   }
   .author-card__link:hover .author-card__icon {
     fill: #4592FF;
+  }
+  .article__tag {
+    -webkit-transition: all 0.3s;
+    transition: all 0.3s;
+  }
+  .article__tag:hover {
+    background-color: #D9DADB;
   }
   .article-swiper__user {
     -webkit-transition: all 0.3s;
