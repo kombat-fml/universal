@@ -3008,6 +3008,7 @@ button {
 }
 
 .comments {
+  scroll-behavior: smooth;
   background-color: #ffffff;
   padding: 60px 0 30px 0;
 }
@@ -3183,7 +3184,6 @@ button {
   color: #262D33;
   font-size: 12px;
   line-height: 15px;
-  margin-right: 15px;
 }
 
 .comment-footer__counter {
@@ -3221,6 +3221,17 @@ button {
       -ms-grid-row-align: end;
       align-self: end;
   line-height: 0;
+}
+
+.comment-footer__comment {
+  text-decoration: none;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: end;
+      -ms-flex-align: end;
+          align-items: end;
+  margin-right: 15px;
 }
 
 .thumb {

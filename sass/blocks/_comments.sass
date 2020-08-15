@@ -1,4 +1,5 @@
 .comments
+  scroll-behavior: smooth
   background-color: $white
   padding: 60px 0 30px 0
   &__wrapper
@@ -98,7 +99,6 @@
       color: $dark
       font-size: 12px
       line-height: 15px
-      margin-right: 15px
     &__counter
       font-weight: 900
       color: $light
@@ -118,6 +118,11 @@
     &__dislike
       align-self: end
       line-height: 0
+    &__comment
+      text-decoration: none
+      display: flex
+      align-items: end
+      margin-right: 15px
 .thumb
   fill: #BCBFC2
   &--active

@@ -247,4 +247,18 @@ document.addEventListener('DOMContentLoaded', () => {
   //   icon: 'success',
   //   confirmButtonText: 'OK',
   // });
+
+  //плавная прокрутка до блока
+  $('a.smoothlink').click(function () {
+    $('html, body').animate(
+      {
+        scrollTop: $($(this).attr('href')).offset().top - 100 + 'px',
+      },
+      {
+        duration: 500,
+        easing: 'swing',
+      }
+    );
+    return false;
+  });
 });
