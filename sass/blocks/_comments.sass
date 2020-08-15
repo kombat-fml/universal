@@ -38,8 +38,11 @@
   align-items: start
   border-top: 1px solid #D9DADB
   padding-top: 20px
+  margin-bottom: 30px
   &--reply
     padding-left: 90px
+  &--hidden
+    display: none
   &__avatar
     width: 75px
     height: 75px
@@ -90,8 +93,13 @@
     &__icon
       margin-right: 5px
       align-self: end
+    &__like, 
+      line-height: 0
+      align-self: start
+    &__dislike
+      align-self: end
+      line-height: 0
 .thumb
-  &-up
-    align-self: start
-  &-down
-    align-self: end
+  fill: #BCBFC2
+  &--active
+    fill: $blue
