@@ -4306,7 +4306,13 @@ button {
     fill: #4592FF;
   }
   .article-share__item:hover {
-    background-color: #BCBFC2;
+    border: 3px solid #BCBFC2;
+    padding: 7px 17px;
+  }
+  .article-share__item--dots:hover {
+    border: 1px solid #D9DADB;
+    padding: 10px;
+    background-color: #4592FF;
   }
 }
 /*# sourceMappingURL=style.css.map */
