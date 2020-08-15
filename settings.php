@@ -5,5 +5,5 @@
     $mail->Password   = 'wjoyqbevnoesvtlu'; // Пароль на почте
     $mail->SMTPSecure = 'ssl';
     $mail->Port       = 465;
-    $mail->setFrom('informativpeople@gmail.com', 'Антон Шахов'); // Адрес самой почты и имя отправителя
+    $mail->setFrom('informativpeople@gmail.com', 'Антон Шахов'); // Адрес самой почты и имя отправителя 
 ?>

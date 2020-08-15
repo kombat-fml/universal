@@ -5,45 +5,31 @@ require 'phpmailer/SMTP.php';
 require 'phpmailer/Exception.php';
 
 // Переменные, которые отправляет пользователь
-$name = $_POST['name'];
-$phone = $_POST['phone'];
 $message = $_POST['message'];
 $email = $_POST['email'];
 $form = $_POST['form']; 
 
 
 if ($form == 'subscribe') {
-  $title = "Новая подписка на сайте Best Tour Plan";
+  $title = "Новая подписка на сайте Universal";
   $body = "
   <h2>Новая подписка</h2>
   <b>E-mail:</b><br>$email
   ";
   $request = 'subscribe';
 } elseif ($form == 'sendmsg') {
-  $title = "Новое обращение Best Tour Plan";
+  $title = "Новое сообщение на сайте Universal";
   $body = "
-  <h2>Новое обращение</h2>
-  <b>Имя:</b> $name<br>
-  <b>Телефон:</b> $phone<br><br>
+  <h2>Новое сообщение</h2>
   <b>Сообщение:</b><br>$message
   ";
   $request = 'sendmsg';
-} else {
-  $title = "Новое бронирование Best Tour Plan";
-  $body = "
-  <h2>Новое бронирование</h2>
-  <b>Имя:</b> $name<br>
-  <b>Телефон:</b> $phone<br><br>
-  <b>E-mail:</b> $email<br><br>
-  <b>Сообщение:</b><br>$message
-  ";
-  $request = 'booking';
 }
 ;
 
 
 // Настройки PHPMailer
-//$mail = new PHPMailer\PHPMailer\PHPMailer();
+$mail = new PHPMailer\PHPMailer\PHPMailer();
 try {
     $mail->isSMTP();   
     $mail->CharSet = "UTF-8";
@@ -71,13 +57,5 @@ try {
     }
 
     //echo json_encode(["result" => $result, "resultfile" => $rfile, "status" => $status]);
-    // Отображение результата
-    if ($request == 'subscribe') {
-      header('Location: subscribe.html');
-    };
-    if ($request == 'sendmsg') {
-      header('Location: sendmsg.html');
-    };
-    if ($request == 'booking') {
-      header('Location: booking.html');
-    };
+
+    //header('Location: index.html');

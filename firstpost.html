@@ -1104,7 +1104,7 @@
                   alt="avatar: Kris Robertson"
                   class="add-comment__avatar"
                 />
-                <form class="form add-comment__form" action="#">
+                <form method="POST" class="form add-comment__form" action="#">
                   <div class="add-comment__input-wrapper">
                     <textarea
                       class="add-comment__input"
@@ -1112,7 +1112,7 @@
                       name="message"
                     ></textarea>
                   </div>
-                  <button class="button add-comment__button">
+                  <button value="sendmsg" class="button add-comment__button">
                     <span class="button-text">Submit</span>
                     <svg width="15" height="7" class="button__arrow">
                       <use xlink:href="img/icons.svg#read-more"></use>
@@ -1134,7 +1134,7 @@
       <div class="container">
         <div class="subscribe__wrapper">
           <h2 class="subscribe__title">Subscribe now and get 20%&nbsp;off</h2>
-          <form class="form subscribe__form" action="#">
+          <form method="POST" class="form subscribe__form" action="#">
             <div class="subscribe__input-wrapper">
               <input
                 name="email"
@@ -1143,7 +1143,9 @@
                 placeholder="Enter your email"
               />
             </div>
-            <button class="button subscribe__button">Subscribe</button>
+            <button value="subscribe" class="button subscribe__button">
+              Subscribe
+            </button>
           </form>
         </div>
         <!-- /.subscribe__wrapper -->
