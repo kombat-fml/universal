@@ -1104,12 +1104,14 @@
                   alt="avatar: Kris Robertson"
                   class="add-comment__avatar"
                 />
-                <form class="add-comment__form" action="#">
-                  <textarea
-                    class="add-comment__input"
-                    placeholder=""
-                    name="message"
-                  ></textarea>
+                <form class="form add-comment__form" action="#">
+                  <div class="add-comment__input-wrapper">
+                    <textarea
+                      class="add-comment__input"
+                      placeholder=""
+                      name="message"
+                    ></textarea>
+                  </div>
                   <button class="button add-comment__button">
                     <span class="button-text">Submit</span>
                     <svg width="15" height="7" class="button__arrow">
@@ -1132,13 +1134,15 @@
       <div class="container">
         <div class="subscribe__wrapper">
           <h2 class="subscribe__title">Subscribe now and get 20%&nbsp;off</h2>
-          <form class="subscribe__form" action="#">
-            <input
-              name="email"
-              type="email"
-              class="subscribe__input"
-              placeholder="Enter your email"
-            />
+          <form class="form subscribe__form" action="#">
+            <div class="subscribe__input-wrapper">
+              <input
+                name="email"
+                type="email"
+                class="subscribe__input"
+                placeholder="Enter your email"
+              />
+            </div>
             <button class="button subscribe__button">Subscribe</button>
           </form>
         </div>
@@ -1344,6 +1348,7 @@
     <script src="js/swiper-bundle.min.js"></script>
     <script src="js/jquery.fancybox.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/sweetalert2@9.17.1/dist/sweetalert2.min.js"></script>
+    <script src="js/jquery.validate.min.js"></script>
     <script src="js/main.js"></script>
   </body>
 </html>

@@ -16,17 +16,25 @@
     margin-bottom: 25px
   &__form
     display: flex
-    align-items: center
+    flex-wrap: wrap
+    align-items: start
+    max-width: 450px
   &__input
-    width: 315px
     border: 1px solid #D9DADB
     border-radius: 5px
     padding: 10px 15px
-    margin-right: 10px
+    color: $dark
+    line-height: 20px
+    font-size: 14px
     &:placeholder
       font-size: 14px
       line-height: 20px
       color: $light
+    &-wrapper
+      margin-right: 10px
+      width: 315px
+      display: flex
+      flex-direction: column
   &__button
     color: $white
     padding: 10px 29px

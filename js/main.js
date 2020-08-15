@@ -261,4 +261,31 @@ document.addEventListener('DOMContentLoaded', () => {
     );
     return false;
   });
+
+  // Обработка форм
+  $('.form').each(function () {
+    $(this).validate({
+      errorClass: 'invalid',
+      rules: {
+        email: {
+          required: true,
+          email: true,
+        },
+        message: {
+          required: true,
+          minlength: 100,
+        },
+      },
+      messages: {
+        email: {
+          required: 'We need your email address to contact you',
+          email: 'Your email address must be in the format of name@domain.com',
+        },
+        message: {
+          required: 'Please, enter your message',
+          minlength: 'Your message must be 100 digits',
+        },
+      },
+    });
+  });
 });
