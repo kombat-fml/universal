@@ -3063,6 +3063,7 @@ button {
 }
 
 .comments-header__icon {
+  fill: #BCBFC2;
   margin-right: 11px;
 }
 
@@ -4306,7 +4307,7 @@ button {
     margin: 5px 0;
   }
   .comment--reply {
-    padding-left: 60px;
+    padding-left: 20px;
   }
   .comment__user-info {
     -ms-flex-wrap: wrap;
@@ -4511,6 +4512,12 @@ button {
     background-color: #D9DADB;
   }
   .comments-body__more:hover .comments-body__more-icon {
+    fill: #4592FF;
+  }
+  .comments-header__link:hover {
+    background-color: #D9DADB;
+  }
+  .comments-header__link:hover .comments-header__icon {
     fill: #4592FF;
   }
 }

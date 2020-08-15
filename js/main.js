@@ -241,4 +241,10 @@ document.addEventListener('DOMContentLoaded', () => {
       colorCounter(selectorLikes);
     }
   }
+  // Swal.fire({
+  //   title: 'Message send!',
+  //   text: 'Do you want to continue',
+  //   icon: 'success',
+  //   confirmButtonText: 'OK',
+  // });
 });
