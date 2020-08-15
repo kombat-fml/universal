@@ -2960,10 +2960,16 @@ button {
   margin-right: 0;
 }
 
+.other-post__link {
+  text-decoration: none;
+  color: #262D33;
+  margin-bottom: 15px;
+}
+
 .other-post__image {
   border-radius: 10px;
-  margin-bottom: 15px;
   height: 180px;
+  width: 100%;
   -o-object-fit: cover;
      object-fit: cover;
 }
@@ -2975,7 +2981,6 @@ button {
   line-height: 25px;
   color: #262D33;
   margin-top: 0;
-  margin-bottom: 15px;
 }
 
 .other-post__info {

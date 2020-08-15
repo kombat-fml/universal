@@ -148,7 +148,6 @@ document.addEventListener('DOMContentLoaded', () => {
 
   // функция проверки кол-ва лайков и отрисовка числа соответствующего цвета
   function colorCounter(element) {
-    console.log(element);
     if (Number(element.textContent) > 0) {
       element.classList.add('comment-footer__counter--green');
     }
