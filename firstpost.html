@@ -180,22 +180,46 @@
     <section class="hero-post">
       <picture>
         <source
+          media="(min-width: 768px)"
+          sizes="100vw"
           class="hero-post__image lazyload"
           type="image/webp"
           data-srcset="img/personal/main.webp"
-          srcset="img/personal/main.webp"
+          srcset="img/personal/main.webp 1366w"
         />
         <source
+          media="(min-width: 320px)"
+          sizes="100vw"
           class="hero-post__image lazyload"
-          type="image/jpeg"
-          data-srcset="img/personal/main.png"
-          srcset="img/personal/main.png"
+          type="image/webp"
+          data-srcset="img/personal/main-500.webp"
+          srcset="img/personal/main-500.webp 1158w"
         />
+        <source
+          media="(min-width: 768px)"
+          sizes="100vw"
+          class="hero-post__image lazyload"
+          type="image/png"
+          data-srcset="img/personal/main.png"
+          srcset="img/personal/main.png 1366w"
+        />
+        <source
+          media="(min-width: 320px)"
+          sizes="100vw"
+          class="hero-post__image lazyload"
+          type="image/png"
+          data-srcset="img/personal/main-500.png"
+          srcset="img/personal/main-500.png 1158w"
+        />
+
         <img
           loading="lazy"
+          sizes="(min-width: 320px) 100vw"
           class="hero-post__image lazyload"
           data-src="img/personal/main.png"
+          data-srcset="img/personal/main-500.png"
           src="img/personal/main.png"
+          srcset="img/personal/main-500.png 1158w"
           alt="bg-image"
         />
       </picture>
