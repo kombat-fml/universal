@@ -471,6 +471,8 @@ button {
 
 .avatar {
   border-radius: 50%;
+  -o-object-fit: cover;
+     object-fit: cover;
 }
 
 .author--white {
@@ -746,6 +748,8 @@ button {
 .offer__img {
   width: 66px;
   height: 44px;
+  -o-object-fit: cover;
+     object-fit: cover;
   -ms-flex-item-align: end;
       align-self: flex-end;
   margin-right: 10px;
@@ -852,6 +856,10 @@ button {
   width: 65px;
   height: 65px;
   margin-left: 15px;
+  -o-object-fit: cover;
+     object-fit: cover;
+  -ms-flex-negative: 0;
+      flex-shrink: 0;
 }
 
 .hero__window {
@@ -929,6 +937,10 @@ button {
 .window__avatar {
   border-radius: 50%;
   margin-right: 10px;
+  width: 45px;
+  height: 45px;
+  -o-object-fit: cover;
+     object-fit: cover;
 }
 
 .window__user {
@@ -1299,6 +1311,8 @@ button {
   width: 45px;
   height: 45px;
   margin-right: 10px;
+  -o-object-fit: cover;
+     object-fit: cover;
 }
 
 .table-card__avatar--small {
@@ -1386,7 +1400,7 @@ button {
   top: 0;
   right: 0;
   width: 100%;
-  max-height: 275px;
+  height: 275px;
   -o-object-fit: cover;
      object-fit: cover;
 }
@@ -1546,6 +1560,8 @@ button {
   width: 45px;
   height: 45px;
   margin-right: 10px;
+  -o-object-fit: cover;
+     object-fit: cover;
 }
 
 .table-columns__author {
@@ -1649,6 +1665,8 @@ button {
 }
 
 .feed__image {
+  width: 336px;
+  height: 195px;
   -o-object-fit: cover;
      object-fit: cover;
 }
@@ -1897,6 +1915,8 @@ button {
 }
 
 .desc-slider__avatar {
+  width: 45px;
+  height: 45px;
   margin-bottom: 8px;
 }
 
@@ -2275,13 +2295,33 @@ button {
 
 .hero-post {
   height: 590px;
-  background: -webkit-gradient(linear, left bottom, left top, from(rgba(64, 48, 61, 0.35)), to(rgba(64, 48, 61, 0.35))), url(../img/personal/main.png) no-repeat center center;
-  background: linear-gradient(0deg, rgba(64, 48, 61, 0.35), rgba(64, 48, 61, 0.35)), url(../img/personal/main.png) no-repeat center center;
-  background-size: cover;
+  position: relative;
+  z-index: 2;
+}
+
+.hero-post__image {
+  position: absolute;
+  height: 100%;
+  width: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+  z-index: 3;
+}
+
+.hero-post__gradient {
+  position: absolute;
+  content: '';
+  width: 100%;
+  height: 100%;
+  z-index: 4;
+  background: -webkit-gradient(linear, left bottom, left top, from(rgba(64, 48, 61, 0.35)), to(rgba(64, 48, 61, 0.35)));
+  background: linear-gradient(0deg, rgba(64, 48, 61, 0.35), rgba(64, 48, 61, 0.35));
+  background-repeat: no-repeat;
 }
 
 .hero-post__wrapper {
   position: relative;
+  z-index: 5;
   padding: 60px 0;
   height: 100%;
   display: -webkit-box;
@@ -2468,6 +2508,7 @@ button {
   padding: 35px 25px 45px 25px;
   background-color: #ffffff;
   position: relative;
+  z-index: 6;
   -ms-flex-negative: 0;
       flex-shrink: 0;
   width: 264px;
@@ -2584,10 +2625,14 @@ button {
 }
 
 .article-swiper__avatar {
+  width: 45px;
+  height: 45px;
   -ms-flex-negative: 0;
       flex-shrink: 0;
   border-radius: 50%;
   margin-right: 10px;
+  -o-object-fit: cover;
+     object-fit: cover;
 }
 
 .article-swiper__author {
@@ -2679,6 +2724,8 @@ button {
   width: 60px;
   border-radius: 50%;
   margin-bottom: 10px;
+  -o-object-fit: cover;
+     object-fit: cover;
 }
 
 .article-quote__info {
@@ -2843,6 +2890,10 @@ button {
 .author-card__avatar {
   border-radius: 50%;
   margin-bottom: 15px;
+  -o-object-fit: cover;
+     object-fit: cover;
+  width: 90px;
+  height: 90px;
 }
 
 .author-card__name {
@@ -2911,6 +2962,10 @@ button {
 }
 
 .material__image {
+  -o-object-fit: cover;
+     object-fit: cover;
+  width: 263px;
+  height: 180px;
   border-radius: 10px;
   overflow: hidden;
   margin-bottom: 15px;

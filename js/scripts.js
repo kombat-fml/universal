@@ -57,6 +57,10 @@ document.addEventListener('DOMContentLoaded', () => {
       nextEl: '.article-swiper__button--next',
       prevEl: '.article-swiper__button--prev',
     },
+    keyboard: {
+      enabled: true,
+      onlyInViewport: true,
+    },
   });
 
   // добавление лайка на странице с постом

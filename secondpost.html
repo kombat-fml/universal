@@ -11,6 +11,10 @@
     />
     <link rel="stylesheet" href="css/swiper-bundle.min.css" />
     <link rel="stylesheet" href="css/jquery.fancybox.min.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/sweetalert2@9.17.1/dist/sweetalert2.min.css"
+    />
     <link rel="stylesheet" href="css/style.css" />
     <title>Universal - online magazine</title>
   </head>
@@ -194,7 +198,7 @@
                 </svg>
                 <span class="hero-post__text">Back to main</span>
               </a>
-              <a href="#" class="hero-post__link">
+              <a href="firstpost.html" class="hero-post__link">
                 <svg width="15" height="7" class="hero-post__icon">
                   <use xlink:href="img/icons.svg#arrow-prev"></use>
                 </svg>
@@ -243,7 +247,7 @@
                 >830</span
               >
             </a>
-            <a href="#" class="hero-post__link">
+            <a href="#comments" class="smoothlink hero-post__link">
               <svg
                 width="15"
                 height="14"
@@ -593,16 +597,18 @@
       <div class="container">
         <div class="other-post__wrapper">
           <div class="other-post__card">
-            <a href="#" class="other-post__link">
+            <a href="secondpost.html" class="other-post__link">
               <img
                 src="img/personal/other-post-1.png"
                 alt="other post image"
                 class="other-post__image"
               />
-              <h3 class="other-post__title">
-                An Evangelist of Singaporean Food Has a New Pulpit
-              </h3>
             </a>
+            <h3 class="other-post__title">
+              <a href="secondpost.html" class="other-post__link">
+                An Evangelist of Singaporean Food Has a New Pulpit
+              </a>
+            </h3>
             <div class="other-post__info">
               <svg width="15" height="11" class="other-post__icon">
                 <use xlink:href="img/icons.svg#eye"></use>
@@ -621,13 +627,17 @@
           </div>
           <!-- /.other-post__card -->
           <div class="other-post__card">
-            <img
-              src="img/personal/other-post-2.png"
-              alt="other post image"
-              class="other-post__image"
-            />
+            <a href="secondpost.html" class="other-post__link">
+              <img
+                src="img/personal/other-post-2.png"
+                alt="other post image"
+                class="other-post__image"
+              />
+            </a>
             <h3 class="other-post__title">
-              At the Mouth of the Mississippi, a Weird and Fragile Beauty
+              <a href="secondpost.html" class="other-post__link">
+                At the Mouth of the Mississippi, a Weird and Fragile Beauty
+              </a>
             </h3>
             <div class="other-post__info">
               <svg width="15" height="11" class="other-post__icon">
@@ -647,13 +657,17 @@
           </div>
           <!-- /.other-post__card -->
           <div class="other-post__card">
-            <img
-              src="img/personal/other-post-3.png"
-              alt="other post image"
-              class="other-post__image"
-            />
+            <a href="secondpost.html" class="other-post__link">
+              <img
+                src="img/personal/other-post-3.png"
+                alt="other post image"
+                class="other-post__image"
+              />
+            </a>
             <h3 class="other-post__title">
-              Chattanooga Is Changing. But Its Charms Remain.
+              <a href="secondpost.html" class="other-post__link">
+                Chattanooga Is Changing. But Its Charms Remain.
+              </a>
             </h3>
             <div class="other-post__info">
               <svg width="15" height="11" class="other-post__icon">
@@ -673,13 +687,17 @@
           </div>
           <!-- /.other-post__card -->
           <div class="other-post__card">
-            <img
-              src="img/personal/other-post-4.png"
-              alt="other post image"
-              class="other-post__image"
-            />
+            <a href="secondpost.html" class="other-post__link">
+              <img
+                src="img/personal/other-post-4.png"
+                alt="other post image"
+                class="other-post__image"
+              />
+            </a>
             <h3 class="other-post__title">
-              How to Get by in a Country if You Don’t Know the Language
+              <a href="secondpost.html" class="other-post__link">
+                How to Get by in a Country if You Don’t Know the Language
+              </a>
             </h3>
             <div class="other-post__info">
               <svg width="15" height="11" class="other-post__icon">
@@ -703,13 +721,13 @@
       </div>
       <!-- /.container -->
     </section>
-    <section class="comments">
+    <section class="comments" id="comments">
       <div class="post-container">
         <div class="comments__wrapper">
           <div class="comments-header">
             <h3 class="comments-header__title">Comments</h3>
             <span class="comments-header__count">19</span>
-            <a href="#" class="comments-header__link">
+            <a href="#add-comment" class="smoothlink comments-header__link">
               <svg width="18" height="18" class="comments-header__icon">
                 <use xlink:href="img/icons.svg#pencil"></use>
               </svg>
@@ -736,14 +754,19 @@
                   tailored to suit colonial interests and commitments
                 </p>
                 <div class="comment__footer comment-footer">
-                  <svg
-                    width="15"
-                    height="14"
-                    class="comment-footer__icon comments-icon"
+                  <a
+                    href="#add-comment"
+                    class="smoothlink comment-footer__comment"
                   >
-                    <use xlink:href="img/icons.svg#comments-icon"></use>
-                  </svg>
-                  <span class="comment-footer__reply">Reply</span>
+                    <svg
+                      width="15"
+                      height="14"
+                      class="comment-footer__icon comments-icon"
+                    >
+                      <use xlink:href="img/icons.svg#comments-icon"></use>
+                    </svg>
+                    <span class="comment-footer__reply">Reply</span>
+                  </a>
                   <a href="#" class="comment-footer__like">
                     <svg
                       width="15"
@@ -786,14 +809,19 @@
                   the post-withdrawal phase
                 </p>
                 <div class="comment__footer comment-footer">
-                  <svg
-                    width="15"
-                    height="14"
-                    class="comment-footer__icon comments-icon"
+                  <a
+                    href="#add-comment"
+                    class="smoothlink comment-footer__comment"
                   >
-                    <use xlink:href="img/icons.svg#comments-icon"></use>
-                  </svg>
-                  <span class="comment-footer__reply">Reply</span>
+                    <svg
+                      width="15"
+                      height="14"
+                      class="comment-footer__icon comments-icon"
+                    >
+                      <use xlink:href="img/icons.svg#comments-icon"></use>
+                    </svg>
+                    <span class="comment-footer__reply">Reply</span>
+                  </a>
                   <a href="#" class="comment-footer__like">
                     <svg width="15" height="13" class="thumb thumb-up">
                       <use xlink:href="img/icons.svg#thumb-up"></use>
@@ -830,14 +858,19 @@
                   1859. Then, in 1887, the Indochinese Union was established.
                 </p>
                 <div class="comment__footer comment-footer">
-                  <svg
-                    width="15"
-                    height="14"
-                    class="comment-footer__icon comments-icon"
+                  <a
+                    href="#add-comment"
+                    class="smoothlink comment-footer__comment"
                   >
-                    <use xlink:href="img/icons.svg#comments-icon"></use>
-                  </svg>
-                  <span class="comment-footer__reply">Reply</span>
+                    <svg
+                      width="15"
+                      height="14"
+                      class="comment-footer__icon comments-icon"
+                    >
+                      <use xlink:href="img/icons.svg#comments-icon"></use>
+                    </svg>
+                    <span class="comment-footer__reply">Reply</span>
+                  </a>
                   <a href="#" class="comment-footer__like">
                     <svg width="15" height="13" class="thumb thumb-up">
                       <use xlink:href="img/icons.svg#thumb-up"></use>
@@ -876,14 +909,19 @@
                   Postcolonial Theory and the Specter of Capital
                 </p>
                 <div class="comment__footer comment-footer">
-                  <svg
-                    width="15"
-                    height="14"
-                    class="comment-footer__icon comments-icon"
+                  <a
+                    href="#add-comment"
+                    class="smoothlink comment-footer__comment"
                   >
-                    <use xlink:href="img/icons.svg#comments-icon"></use>
-                  </svg>
-                  <span class="comment-footer__reply">Reply</span>
+                    <svg
+                      width="15"
+                      height="14"
+                      class="comment-footer__icon comments-icon"
+                    >
+                      <use xlink:href="img/icons.svg#comments-icon"></use>
+                    </svg>
+                    <span class="comment-footer__reply">Reply</span>
+                  </a>
                   <a href="#" class="comment-footer__like">
                     <svg width="15" height="13" class="thumb thumb-up">
                       <use xlink:href="img/icons.svg#thumb-up"></use>
@@ -919,14 +957,19 @@
                   the post-withdrawal phase
                 </p>
                 <div class="comment__footer comment-footer">
-                  <svg
-                    width="15"
-                    height="14"
-                    class="comment-footer__icon comments-icon"
+                  <a
+                    href="#add-comment"
+                    class="smoothlink comment-footer__comment"
                   >
-                    <use xlink:href="img/icons.svg#comments-icon"></use>
-                  </svg>
-                  <span class="comment-footer__reply">Reply</span>
+                    <svg
+                      width="15"
+                      height="14"
+                      class="comment-footer__icon comments-icon"
+                    >
+                      <use xlink:href="img/icons.svg#comments-icon"></use>
+                    </svg>
+                    <span class="comment-footer__reply">Reply</span>
+                  </a>
                   <a href="#" class="comment-footer__like">
                     <svg width="15" height="13" class="thumb thumb-up">
                       <use xlink:href="img/icons.svg#thumb-up"></use>
@@ -966,14 +1009,19 @@
                   1859. Then, in 1887, the Indochinese Union was established.
                 </p>
                 <div class="comment__footer comment-footer">
-                  <svg
-                    width="15"
-                    height="14"
-                    class="comment-footer__icon comments-icon"
+                  <a
+                    href="#add-comment"
+                    class="smoothlink comment-footer__comment"
                   >
-                    <use xlink:href="img/icons.svg#comments-icon"></use>
-                  </svg>
-                  <span class="comment-footer__reply">Reply</span>
+                    <svg
+                      width="15"
+                      height="14"
+                      class="comment-footer__icon comments-icon"
+                    >
+                      <use xlink:href="img/icons.svg#comments-icon"></use>
+                    </svg>
+                    <span class="comment-footer__reply">Reply</span>
+                  </a>
                   <a href="#" class="comment-footer__like">
                     <svg width="15" height="13" class="thumb thumb-up">
                       <use xlink:href="img/icons.svg#thumb-up"></use>
@@ -1012,14 +1060,19 @@
                   Postcolonial Theory and the Specter of Capital
                 </p>
                 <div class="comment__footer comment-footer">
-                  <svg
-                    width="15"
-                    height="14"
-                    class="comment-footer__icon comments-icon"
+                  <a
+                    href="#add-comment"
+                    class="smoothlink comment-footer__comment"
                   >
-                    <use xlink:href="img/icons.svg#comments-icon"></use>
-                  </svg>
-                  <span class="comment-footer__reply">Reply</span>
+                    <svg
+                      width="15"
+                      height="14"
+                      class="comment-footer__icon comments-icon"
+                    >
+                      <use xlink:href="img/icons.svg#comments-icon"></use>
+                    </svg>
+                    <span class="comment-footer__reply">Reply</span>
+                  </a>
                   <a href="#" class="comment-footer__like">
                     <svg width="15" height="13" class="thumb thumb-up">
                       <use xlink:href="img/icons.svg#thumb-up"></use>
@@ -1043,7 +1096,7 @@
               </svg>
               <span class="comments-body__more-text">Load more</span>
             </a>
-            <div class="add-comment">
+            <div id="add-comment" class="add-comment">
               <h4 class="add-comment__title">What do you think?</h4>
               <div class="add-comment__wrapper">
                 <img
@@ -1051,13 +1104,25 @@
                   alt="avatar: Kris Robertson"
                   class="add-comment__avatar"
                 />
-                <form class="add-comment__form" action="#">
-                  <textarea
-                    class="add-comment__input"
-                    placeholder=""
-                    name="message"
-                  ></textarea>
-                  <button class="button add-comment__button">
+                <form
+                  method="POST"
+                  class="form add-comment__form"
+                  action=""
+                  id="comment-form"
+                >
+                  <div class="add-comment__input-wrapper">
+                    <textarea
+                      class="add-comment__input"
+                      placeholder=""
+                      name="message"
+                    ></textarea>
+                  </div>
+                  <button
+                    type="submit"
+                    name="form"
+                    value="sendmsg"
+                    class="button add-comment__button"
+                  >
                     <span class="button-text">Submit</span>
                     <svg width="15" height="7" class="button__arrow">
                       <use xlink:href="img/icons.svg#read-more"></use>
@@ -1079,14 +1144,28 @@
       <div class="container">
         <div class="subscribe__wrapper">
           <h2 class="subscribe__title">Subscribe now and get 20%&nbsp;off</h2>
-          <form class="subscribe__form" action="#">
-            <input
-              name="email"
-              type="email"
-              class="subscribe__input"
-              placeholder="Enter your email"
-            />
-            <button class="button subscribe__button">Subscribe</button>
+          <form
+            id="subscribe-form"
+            method="POST"
+            class="form subscribe__form"
+            action=""
+          >
+            <div class="subscribe__input-wrapper">
+              <input
+                name="email"
+                type="email"
+                class="subscribe__input"
+                placeholder="Enter your email"
+              />
+            </div>
+            <button
+              type="submit"
+              name="form"
+              value="subscribe"
+              class="button subscribe__button"
+            >
+              Subscribe
+            </button>
           </form>
         </div>
         <!-- /.subscribe__wrapper -->
@@ -1290,6 +1369,8 @@
     <script src="js/jquery-3.5.1.min.js"></script>
     <script src="js/swiper-bundle.min.js"></script>
     <script src="js/jquery.fancybox.min.js"></script>
-    <script src="js/main.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@9.17.1/dist/sweetalert2.min.js"></script>
+    <script src="js/jquery.validate.min.js"></script>
+    <script src="js/scripts.js"></script>
   </body>
 </html>
