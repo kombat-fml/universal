@@ -178,11 +178,27 @@
       <!-- /.menu-wrapper -->
     </header>
     <section class="hero-post">
-      <img
-        src="img/personal/second.jpg"
-        alt="bg-image"
-        class="hero-post__image"
-      />
+      <picture>
+        <source
+          class="hero-post__image lazyload"
+          type="image/webp"
+          data-srcset="img/personal/second.webp"
+          srcset="img/personal/second.webp"
+        />
+        <source
+          class="hero-post__image lazyload"
+          type="image/jpeg"
+          data-srcset="img/personal/second.png"
+          srcset="img/personal/second.png"
+        />
+        <img
+          loading="lazy"
+          class="hero-post__image lazyload"
+          data-src="img/personal/second.png"
+          src="img/personal/second.png"
+          alt="bg-image"
+        />
+      </picture>
       <div class="hero-post__gradient"></div>
       <!-- /.hero-post__gradient -->
       <div class="post-container">
@@ -375,27 +391,75 @@
           <div class="article-swiper__container swiper-container">
             <div class="article-swiper__wrapper swiper-wrapper">
               <div class="article-swiper__slide swiper-slide">
-                <img
-                  src="img/personal/slide-1.png"
-                  alt="slide-1"
-                  class="article-swiper__image"
-                />
+                <picture>
+                  <source
+                    class="article-swiper__image lazyload"
+                    type="image/webp"
+                    data-srcset="img/personal/slide-1.webp"
+                    srcset="img/personal/slide-1.webp"
+                  />
+                  <source
+                    class="article-swiper__image lazyload"
+                    type="image/jpeg"
+                    data-srcset="img/personal/slide-1.png"
+                    srcset="img/personal/slide-1.png"
+                  />
+                  <img
+                    loading="lazy"
+                    class="article-swiper__image lazyload"
+                    data-src="img/personal/slide-1.png"
+                    src="img/personal/slide-1.png"
+                    alt="slide-1"
+                  />
+                </picture>
               </div>
               <!-- /.article-swiper__slide -->
               <div class="article-swiper__slide swiper-slide">
-                <img
-                  src="img/personal/slide-2.jpg"
-                  alt="slide-2"
-                  class="article-swiper__image"
-                />
+                <picture>
+                  <source
+                    class="article-swiper__image lazyload"
+                    type="image/webp"
+                    data-srcset="img/personal/slide-2.webp"
+                    srcset="img/personal/slide-2.webp"
+                  />
+                  <source
+                    class="article-swiper__image lazyload"
+                    type="image/jpeg"
+                    data-srcset="img/personal/slide-2.jpg"
+                    srcset="img/personal/slide-2.jpg"
+                  />
+                  <img
+                    loading="lazy"
+                    class="article-swiper__image lazyload"
+                    data-src="img/personal/slide-2.jpg"
+                    src="img/personal/slide-2.jpg"
+                    alt="slide-2"
+                  />
+                </picture>
               </div>
               <!-- /.article-swiper__slide -->
               <div class="article-swiper__slide swiper-slide">
-                <img
-                  src="img/personal/slide-3.jpg"
-                  alt="slide-3"
-                  class="article-swiper__image"
-                />
+                <picture>
+                  <source
+                    class="article-swiper__image lazyload"
+                    type="image/webp"
+                    data-srcset="img/personal/slide-3.webp"
+                    srcset="img/personal/slide-3.webp"
+                  />
+                  <source
+                    class="article-swiper__image lazyload"
+                    type="image/jpeg"
+                    data-srcset="img/personal/slide-3.jpg"
+                    srcset="img/personal/slide-3.jpg"
+                  />
+                  <img
+                    loading="lazy"
+                    class="article-swiper__image lazyload"
+                    data-src="img/personal/slide-3.jpg"
+                    src="img/personal/slide-3.jpg"
+                    alt="slide-3"
+                  />
+                </picture>
               </div>
               <!-- /.article-swiper__slide -->
             </div>
