@@ -2064,7 +2064,6 @@ button {
   -webkit-box-align: start;
       -ms-flex-align: start;
           align-items: start;
-  max-width: 450px;
 }
 
 .subscribe__input {
