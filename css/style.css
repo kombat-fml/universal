@@ -498,7 +498,8 @@ button {
   line-height: 15px;
   -ms-flex-preferred-size: 100%;
       flex-basis: 100%;
-  margin-bottom: 5px;
+  position: absolute;
+  bottom: 0;
 }
 
 .header {
@@ -2069,10 +2070,13 @@ button {
 .subscribe__input {
   border: 1px solid #D9DADB;
   border-radius: 5px;
-  padding: 10px 15px;
+  padding: 9px 15px;
   color: #262D33;
   line-height: 20px;
   font-size: 14px;
+  position: absolute;
+  bottom: 30px;
+  width: 100%;
 }
 
 .subscribe__input:placeholder {
@@ -2084,6 +2088,7 @@ button {
 .subscribe__input-wrapper {
   margin-right: 10px;
   width: 315px;
+  height: 70px;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -2091,6 +2096,7 @@ button {
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
+  position: relative;
 }
 
 .subscribe__button {
@@ -3404,13 +3410,16 @@ button {
   font-size: 14px;
   width: 100%;
   min-height: 130px;
+  position: absolute;
+  bottom: 15px;
 }
 
 .add-comment__input-wrapper {
+  height: 150px;
   -ms-flex-preferred-size: 100%;
       flex-basis: 100%;
   max-width: 585px;
-  margin-bottom: 15px;
+  margin-bottom: 5px;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -3418,6 +3427,7 @@ button {
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
+  position: relative;
 }
 
 @media (max-width: 1200px) {
@@ -4057,7 +4067,7 @@ button {
     -ms-flex-preferred-size: 100%;
         flex-basis: 100%;
     margin-right: 0;
-    margin-bottom: 15px;
+    margin-bottom: 5px;
   }
   .footer__logo {
     -ms-flex-preferred-size: 25%;
