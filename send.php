@@ -6,26 +6,13 @@ require 'phpmailer/Exception.php';
 
 // Переменные, которые отправляет пользователь
 $message = $_POST['message'];
-$email = $_POST['email'];
-$form = $_POST['form']; 
 
+$title = "Новое сообщение на сайте Universal";
+$body = "
+<h2>Новое сообщение</h2>
+<b>Сообщение:</b><br>$message
+";
 
-if ($form == 'subscribe') {
-  $title = "Новая подписка на сайте Universal";
-  $body = "
-  <h2>Новая подписка</h2>
-  <b>E-mail:</b><br>$email
-  ";
-  $request = 'subscribe';
-} elseif ($form == 'sendmsg') {
-  $title = "Новое сообщение на сайте Universal";
-  $body = "
-  <h2>Новое сообщение</h2>
-  <b>Сообщение:</b><br>$message
-  ";
-  $request = 'sendmsg';
-}
-;
 
 
 // Настройки PHPMailer

@@ -194,12 +194,6 @@ document.addEventListener('DOMContentLoaded', () => {
       colorCounter(selectorLikes);
     }
   }
-  // Swal.fire({
-  //   title: 'Message send!',
-  //   text: 'Do you want to continue',
-  //   icon: 'success',
-  //   confirmButtonText: 'OK',
-  // });
 
   //плавная прокрутка до блока
   $('a.smoothlink').click(function () {
@@ -216,29 +210,73 @@ document.addEventListener('DOMContentLoaded', () => {
   });
 
   // Обработка форм
-  $('.form').each(function () {
-    $(this).validate({
-      errorClass: 'invalid',
-      rules: {
-        email: {
-          required: true,
-          email: true,
-        },
-        message: {
-          required: true,
-          minlength: 100,
-        },
+  $('#subscribe-form').validate({
+    errorClass: 'invalid',
+    rules: {
+      email: {
+        required: true,
+        email: true,
       },
-      messages: {
-        email: {
-          required: 'We need your email address to contact you',
-          email: 'Your email address must be in the format of name@domain.com',
-        },
-        message: {
-          required: 'Please, enter your message',
-          minlength: 'Your message must be 100 digits',
-        },
+    },
+    messages: {
+      email: {
+        required: 'We need your email address to contact you',
+        email: 'Your email address must be in the format of name@domain.com',
       },
-    });
+    },
+    submitHandler: function (form) {
+      $.ajax({
+        url: 'mail.php',
+        type: 'POST',
+        data: $('#subscribe-form').serialize(),
+        success: function (res) {
+          Swal.fire({
+            title: 'Subscribing success!',
+            text: 'Thanks for your subscribing.',
+            icon: 'success',
+            confirmButtonText: 'OK',
+          });
+          $('#subscribe-form').trigger('reset');
+        },
+        error: function () {
+          console.log('Ошибка!');
+        },
+      });
+    },
+  });
+
+  // Обработка форм
+  $('#comment-form').validate({
+    errorClass: 'invalid',
+    rules: {
+      message: {
+        required: true,
+        minlength: 100,
+      },
+    },
+    messages: {
+      message: {
+        required: 'Please, enter your message',
+        minlength: 'Your message must be 100 digits',
+      },
+    },
+    submitHandler: function (form) {
+      $.ajax({
+        url: 'send.php',
+        type: 'POST',
+        data: $('#comment-form').serialize(),
+        success: function (res) {
+          Swal.fire({
+            title: 'Your message has been sent.',
+            icon: 'success',
+            confirmButtonText: 'OK',
+          });
+          $('#comment-form').trigger('reset');
+        },
+        error: function () {
+          console.log('Ошибка!');
+        },
+      });
+    },
   });
 });

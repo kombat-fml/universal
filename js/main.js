@@ -93,13 +93,6 @@ document.addEventListener('DOMContentLoaded', () => {
     },
   });
 
-  // Swal.fire({
-  //   title: 'Message send!',
-  //   text: 'Do you want to continue',
-  //   icon: 'success',
-  //   confirmButtonText: 'OK',
-  // });
-
   //плавная прокрутка до блока
   $('a.smoothlink').click(function () {
     $('html, body').animate(
@@ -115,29 +108,38 @@ document.addEventListener('DOMContentLoaded', () => {
   });
 
   // Обработка форм
-  $('.form').each(function () {
-    $(this).validate({
-      errorClass: 'invalid',
-      rules: {
-        email: {
-          required: true,
-          email: true,
-        },
-        message: {
-          required: true,
-          minlength: 100,
-        },
+  $('#subscribe-form').validate({
+    errorClass: 'invalid',
+    rules: {
+      email: {
+        required: true,
+        email: true,
       },
-      messages: {
-        email: {
-          required: 'We need your email address to contact you',
-          email: 'Your email address must be in the format of name@domain.com',
-        },
-        message: {
-          required: 'Please, enter your message',
-          minlength: 'Your message must be 100 digits',
-        },
+    },
+    messages: {
+      email: {
+        required: 'We need your email address to contact you',
+        email: 'Your email address must be in the format of name@domain.com',
       },
-    });
+    },
+    submitHandler: function (form) {
+      $.ajax({
+        url: 'mail.php',
+        type: 'POST',
+        data: $('#subscribe-form').serialize(),
+        success: function (res) {
+          Swal.fire({
+            title: 'Subscribing success!',
+            text: 'Thanks for your subscribing.',
+            icon: 'success',
+            confirmButtonText: 'OK',
+          });
+          $('#subscribe-form').trigger('reset');
+        },
+        error: function () {
+          console.log('Ошибка!');
+        },
+      });
+    },
   });
 });
