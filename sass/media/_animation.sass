@@ -71,6 +71,13 @@
           & .comments
             &-icon
               fill: $blue
+          & .likes
+            &-icon
+              fill: $blue
+      &__bookmark
+        &:hover
+          & .bookmark
+            fill: $blue
   .burger
     &:hover
       .burger
@@ -126,9 +133,18 @@
               &__icon
                 &--comments
                   fill: $blue
+                &--white
+                  fill: $blue
       &__button
         &:hover
           background-color: $light
+      &__bookmark
+        &:hover
+          & .hero
+            &-post
+              &__bookmark
+                &-icon
+                  fill: $blue
   .author
     &-card
       &__footer
